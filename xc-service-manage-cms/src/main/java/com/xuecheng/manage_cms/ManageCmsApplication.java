@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * @Auther:http://www.gzcb.com
+ * @Auther:ghost
  * @Date:2021/6/12
  * @Description:com.xuecheng.manage_cms
  * @version:1.0
