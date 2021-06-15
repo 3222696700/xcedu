@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Auther:ghost
@@ -24,21 +25,37 @@ public class CmsPageRepositoryTest {
     @Autowired
     CmsPageRepository cmsPageRepository;
 
-//    分页查询页面
+    //    分页查询页面
     @Test
-    public void testFindAllByPage()
-    {
-        Page page=cmsPageRepository.findAll(PageRequest.of(0,10));
+    public void testFindAllByPage() {
+        Page page = cmsPageRepository.findAll(PageRequest.of(0, 10));
         System.out.println(page);
     }
 
-
-
-//    查询所有页面
+    //    查询所有页面
     @Test
-    public void testFindAll()
-    {
-       List<CmsPage> list= cmsPageRepository.findAll();
-       System.out.println(list.size());
+    public void testFindAll() {
+        List<CmsPage> list = cmsPageRepository.findAll();
+        System.out.println(list.size());
     }
+
+//    修改页面信息
+    @Test
+    public void testUpdate() {
+        Optional<CmsPage> optional = cmsPageRepository.findById("");
+
+        if (optional.isPresent()) {
+            CmsPage cmsPage = optional.get();
+
+            cmsPage.setPageName("test01");
+
+            CmsPage cmsPage1=cmsPageRepository.save(cmsPage);
+
+            System.out.println(cmsPage1);
+        }
+
+    }
+
+//    删除页面
+
 }
