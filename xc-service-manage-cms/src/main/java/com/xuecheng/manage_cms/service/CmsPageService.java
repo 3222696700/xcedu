@@ -2,6 +2,7 @@ package com.xuecheng.manage_cms.service;
 
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
+import com.xuecheng.framework.domain.cms.response.CmsPageResult;
 import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.QueryResult;
@@ -11,6 +12,7 @@ import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Optional;
 
 /**
  * @Auther:ghost
@@ -42,30 +44,25 @@ public class CmsPageService {
      */
     public QueryResponseResult findList(int page, int size, QueryPageRequest queryPageRequest) {
 
-        if(queryPageRequest==null)
-        {
-            queryPageRequest=new QueryPageRequest();
+        if (queryPageRequest == null) {
+            queryPageRequest = new QueryPageRequest();
         }
 
-        ExampleMatcher exampleMatcher=ExampleMatcher.matching().withMatcher("pageAliase",ExampleMatcher.GenericPropertyMatchers.contains());
+        ExampleMatcher exampleMatcher = ExampleMatcher.matching().withMatcher("pageAliase", ExampleMatcher.GenericPropertyMatchers.contains());
 
-        CmsPage cmsPage=new CmsPage();
+        CmsPage cmsPage = new CmsPage();
 
-        if(StringUtils.isNotEmpty(queryPageRequest.getSiteId()))
-        {
+        if (StringUtils.isNotEmpty(queryPageRequest.getSiteId())) {
             cmsPage.setSiteId(queryPageRequest.getSiteId());
         }
-        if(StringUtils.isNotEmpty(queryPageRequest.getPageAliase()))
-        {
+        if (StringUtils.isNotEmpty(queryPageRequest.getPageAliase())) {
             cmsPage.setPageAliase(queryPageRequest.getPageAliase());
         }
-        if(StringUtils.isNotEmpty(queryPageRequest.getPageId()))
-        {
+        if (StringUtils.isNotEmpty(queryPageRequest.getPageId())) {
             cmsPage.setPageId(queryPageRequest.getPageId());
         }
 
-        Example<CmsPage> example=Example.of(cmsPage,exampleMatcher);
-
+        Example<CmsPage> example = Example.of(cmsPage, exampleMatcher);
 
         if (page <= 0) {
             page = 1;
@@ -76,7 +73,7 @@ public class CmsPageService {
             size = 10;
         }
 
-        Pageable pageable=PageRequest.of(page,size);
+        Pageable pageable = PageRequest.of(page, size);
 
         Page<CmsPage> pages = cmsPageRepository.findAll(example, pageable);
 
@@ -87,5 +84,59 @@ public class CmsPageService {
         queryResult.setTotal(pages.getTotalElements());
 
         return new QueryResponseResult(CommonCode.SUCCESS, queryResult);
+    }
+
+    //    添加页面
+    public CmsPageResult add(CmsPage cmsPage) {
+
+        //页面唯一性校验
+        CmsPage currentPage = cmsPageRepository.findByPageNameAndSiteIdAndPageWebPath(cmsPage.getPageName(),
+                cmsPage.getSiteId(), cmsPage.getPageWebPath());
+
+        if (currentPage == null) {
+
+            cmsPage.setPageId(null);
+            cmsPageRepository.save(cmsPage);
+
+            return new CmsPageResult(CommonCode.SUCCESS, cmsPage);
+        }
+
+        return new CmsPageResult(CommonCode.FAIL, null);
+    }
+
+    public CmsPage findById(String Id) {
+
+        Optional<CmsPage> optionalCmsPage = cmsPageRepository.findById(Id);
+
+        return (optionalCmsPage.isPresent()) ? optionalCmsPage.get():null;
+    }
+
+    public CmsPageResult update(String Id, CmsPage cmsPage) {
+        CmsPage oldCmsPage = findById(Id);
+
+        if (oldCmsPage != null) {
+            //更新模板Id
+            oldCmsPage.setTemplateId(cmsPage.getTemplateId());
+            //更新站点Id
+            oldCmsPage.setSiteId(cmsPage.getSiteId());
+            //更新页面别名
+            oldCmsPage.setPageAliase(cmsPage.getPageAliase());
+            //更新页面名称
+            oldCmsPage.setPageName(cmsPage.getPageName());
+            //更新访问路径
+            oldCmsPage.setPageWebPath(cmsPage.getPageWebPath());
+            //更新物理路径
+            oldCmsPage.setPagePhysicalPath(cmsPage.getPagePhysicalPath());
+
+            CmsPage newCmsPage = cmsPageRepository.save(oldCmsPage);
+
+            if (newCmsPage!=null){
+                return new CmsPageResult(CommonCode.SUCCESS,newCmsPage);
+            }
+
+        }
+
+        return new CmsPageResult(CommonCode.FAIL,null);
+
     }
 }

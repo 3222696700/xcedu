@@ -90,15 +90,12 @@ public class CmsPageRepositoryTest {
                                                     .withMatcher("pageId",ExampleMatcher.GenericPropertyMatchers.exact());
 
 
-
 //        设置查询查询条件
         Example<CmsPage> example=Example.of(cmsPage,exampleMatcher);
 
 //      4、根据条件查询符合条件页面
         Page<CmsPage> pages = cmsPageRepository.findAll(example, pageable);
-
         List<CmsPage> list=pages.getContent();
-
         System.out.println(list);
     }
 

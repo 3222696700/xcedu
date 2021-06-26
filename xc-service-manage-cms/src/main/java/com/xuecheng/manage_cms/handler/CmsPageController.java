@@ -1,14 +1,14 @@
 package com.xuecheng.manage_cms.handler;
 
 import com.xuecheng.api.cms.CmsPageControllerApi;
+import com.xuecheng.framework.domain.cms.CmsPage;
+import com.xuecheng.framework.domain.cms.CmsPageParam;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.model.response.QueryResponseResult;
+import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.service.CmsPageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Auther:
@@ -29,5 +29,27 @@ public class CmsPageController implements CmsPageControllerApi {
     public QueryResponseResult findList(@PathVariable("page") int page, @PathVariable("size") int size, QueryPageRequest queryPageRequest) {
 
         return cmsPageService.findList(page, size, queryPageRequest);
+    }
+
+    @PostMapping(value = "/add")
+    @Override
+    public ResponseResult add(@RequestBody CmsPage cmsPage) {
+
+        return cmsPageService.add(cmsPage);
+    }
+
+    @GetMapping(value = "/get/{id}")
+    @Override
+    public CmsPage findById(@PathVariable("id") String Id) {
+        CmsPage editCmsPage=cmsPageService.findById(Id);
+
+        return editCmsPage;
+    }
+
+    @Override
+    public ResponseResult update(String Id, CmsPage  cmsPage) {
+
+
+        return cmsPageService.update(Id,cmsPage);
     }
 }
