@@ -2,6 +2,7 @@ package com.xuecheng.api.cms;
 
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
+import com.xuecheng.framework.domain.cms.response.CmsPageResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
@@ -26,19 +27,24 @@ public interface CmsPageControllerApi {
     })
     public QueryResponseResult findList(int page, int size, QueryPageRequest queryPageRequest);
 
-//    页面更新
-//    public QueryResponseResult updatePage();
 
     //    新增页面
     @ApiOperation("新增页面")
     public ResponseResult add(CmsPage cmsPage);
 
+
     @ApiOperation("根据ID查询页面")
    public CmsPage findById(String Id);
 
+
     @ApiOperation("更新页面")
 //  更新页面
-    public ResponseResult  update(String Id,CmsPage cmsPage);
+    public CmsPageResult update(String id, CmsPage cmsPage);
+
+
+    @ApiOperation("删除页面")
+//  删除页面
+    public ResponseResult delete(String id);
 
 
 }

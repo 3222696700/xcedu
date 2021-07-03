@@ -2,8 +2,8 @@ package com.xuecheng.manage_cms.handler;
 
 import com.xuecheng.api.cms.CmsPageControllerApi;
 import com.xuecheng.framework.domain.cms.CmsPage;
-import com.xuecheng.framework.domain.cms.CmsPageParam;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
+import com.xuecheng.framework.domain.cms.response.CmsPageResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.service.CmsPageService;
@@ -41,15 +41,21 @@ public class CmsPageController implements CmsPageControllerApi {
     @GetMapping(value = "/get/{id}")
     @Override
     public CmsPage findById(@PathVariable("id") String Id) {
-        CmsPage editCmsPage=cmsPageService.findById(Id);
 
-        return editCmsPage;
+        return cmsPageService.findById(Id);
     }
 
+
+    @PutMapping("/edit/{id}")
     @Override
-    public ResponseResult update(String Id, CmsPage  cmsPage) {
+    public CmsPageResult update(@PathVariable("id") String id, @RequestBody CmsPage cmsPage) {
 
+        return cmsPageService.update(id,cmsPage);
+    }
 
-        return cmsPageService.update(Id,cmsPage);
+    @DeleteMapping("/del/{id}")
+    @Override
+    public ResponseResult delete(@PathVariable("id") String id) {
+        return cmsPageService.delete(id);
     }
 }

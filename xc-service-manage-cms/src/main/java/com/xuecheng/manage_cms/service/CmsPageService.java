@@ -2,10 +2,13 @@ package com.xuecheng.manage_cms.service;
 
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
+import com.xuecheng.framework.domain.cms.response.CmsCode;
 import com.xuecheng.framework.domain.cms.response.CmsPageResult;
+import com.xuecheng.framework.exception.ExceptionCast;
 import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.QueryResult;
+import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.mapper.CmsPageRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.*;
@@ -89,15 +92,21 @@ public class CmsPageService {
     //    添加页面
     public CmsPageResult add(CmsPage cmsPage) {
 
+//        参数校验
+        if (cmsPage == null) {
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+
         //页面唯一性校验
         CmsPage currentPage = cmsPageRepository.findByPageNameAndSiteIdAndPageWebPath(cmsPage.getPageName(),
                 cmsPage.getSiteId(), cmsPage.getPageWebPath());
 
-        if (currentPage == null) {
-
+        if (currentPage != null) {
+            ExceptionCast.cast(CmsCode.CMS_ADDPAGE_EXISTSNAME);
+        }
+        else {
             cmsPage.setPageId(null);
             cmsPageRepository.save(cmsPage);
-
             return new CmsPageResult(CommonCode.SUCCESS, cmsPage);
         }
 
@@ -108,13 +117,14 @@ public class CmsPageService {
 
         Optional<CmsPage> optionalCmsPage = cmsPageRepository.findById(Id);
 
-        return (optionalCmsPage.isPresent()) ? optionalCmsPage.get():null;
+        return optionalCmsPage.orElse(null);
     }
 
-    public CmsPageResult update(String Id, CmsPage cmsPage) {
-        CmsPage oldCmsPage = findById(Id);
+    public CmsPageResult update(String id, CmsPage cmsPage) {
+        CmsPage oldCmsPage = findById(id);
 
         if (oldCmsPage != null) {
+
             //更新模板Id
             oldCmsPage.setTemplateId(cmsPage.getTemplateId());
             //更新站点Id
@@ -130,13 +140,27 @@ public class CmsPageService {
 
             CmsPage newCmsPage = cmsPageRepository.save(oldCmsPage);
 
-            if (newCmsPage!=null){
-                return new CmsPageResult(CommonCode.SUCCESS,newCmsPage);
-            }
+            return new CmsPageResult(CommonCode.SUCCESS, newCmsPage);
 
         }
 
-        return new CmsPageResult(CommonCode.FAIL,null);
+        return new CmsPageResult(CommonCode.FAIL, null);
+
+    }
+
+    public ResponseResult delete(String id) {
+
+        Optional<CmsPage> optional = cmsPageRepository.findById(id);
+
+        if (optional.isPresent()) {
+
+            cmsPageRepository.deleteById(id);
+
+            return new ResponseResult(CommonCode.SUCCESS);
+
+        }
+
+        return new ResponseResult(CommonCode.FAIL);
 
     }
 }
