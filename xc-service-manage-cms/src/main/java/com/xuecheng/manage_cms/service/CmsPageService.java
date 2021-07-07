@@ -1,5 +1,6 @@
 package com.xuecheng.manage_cms.service;
 
+import com.alibaba.fastjson.JSON;
 import com.mongodb.client.gridfs.GridFSBucket;
 import com.mongodb.client.gridfs.GridFSDownloadStream;
 import com.mongodb.client.gridfs.model.GridFSFile;
@@ -22,6 +23,9 @@ import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.data.domain.*;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -35,8 +39,11 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Auther:ghost
@@ -72,6 +79,9 @@ public class CmsPageService {
 
     @Resource
     GridFSBucket gridFSBucket;
+
+    @Resource
+    RabbitTemplate rabbitTemplate;
 
 
 
@@ -393,6 +403,56 @@ public class CmsPageService {
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    /**
+     * @param pageId    发布页面pageId
+     * @return ResponseResult : 统一数据返回对象。
+     * @Description: 发布指定pageId的页面
+     * @Author: ghost
+     * @Date:2021/6/22
+     */
+    public ResponseResult postPage(String pageId){
+
+        String page=this.getPageHtml(pageId);
+
+        CmsPage cmsPage=this.saveHtml(pageId,page);
+
+        sendMsgToMQ(pageId);
+
+        return new ResponseResult(CommonCode.SUCCESS);
+    }
+
+
+    public CmsPage saveHtml(String pageId,String htmlContent){
+
+       CmsPage cmsPage=this.findById(pageId);
+
+       InputStream inputStream= IOUtils.toInputStream(htmlContent, StandardCharsets.UTF_8);
+
+       ObjectId objectId= gridFsTemplate.store(inputStream,cmsPage.getPageName());
+
+       CmsPage newCmsPage=cmsPageRepository.save(cmsPage);
+
+       return newCmsPage;
+    }
+
+    public void sendMsgToMQ(String pageId){
+
+        CmsPage cmsPage=this.findById(pageId);
+
+        if(cmsPage==null){
+            ExceptionCast.cast(CmsCode.CMS_PAGE_NOT_EXISTS);
+        }
+
+        Map map=new ConcurrentHashMap();
+
+        map.put("pageId",pageId);
+
+        String msg=JSON.toJSONString(map);
+
+        rabbitTemplate.send("ex_routing_cms_postpage",cmsPage.getSiteId(),new Message(msg.getBytes(StandardCharsets.UTF_8),null));
     }
 
 }

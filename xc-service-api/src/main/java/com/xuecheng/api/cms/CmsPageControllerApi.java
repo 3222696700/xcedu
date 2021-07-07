@@ -25,27 +25,31 @@ public interface CmsPageControllerApi {
             @ApiImplicitParam(name = "page", value = "页码", required = true, paramType = "path", dataType = "int"),
             @ApiImplicitParam(name = "size", value = "每页记录数", required = true, paramType = "path", dataType = "int")
     })
-    public QueryResponseResult findList(int page, int size, QueryPageRequest queryPageRequest);
+    QueryResponseResult findList(int page, int size, QueryPageRequest queryPageRequest);
 
 
     //    新增页面
     @ApiOperation("新增页面")
-    public ResponseResult add(CmsPage cmsPage);
+    ResponseResult add(CmsPage cmsPage);
 
 
     @ApiOperation("根据ID查询页面")
-   public CmsPage findById(String Id);
+    CmsPage findById(String Id);
 
 
     @ApiOperation("更新页面")
 //  更新页面
-    public CmsPageResult update(String id, CmsPage cmsPage);
+    CmsPageResult update(String id, CmsPage cmsPage);
 
 
     @ApiOperation("删除页面")
 //  删除页面
-    public ResponseResult delete(String id);
+    ResponseResult delete(String pageId);
 
+
+    @ApiOperation("发布页面")
+//  发布页面
+    ResponseResult postPage(String pageId);
 
 
 
