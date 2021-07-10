@@ -13,6 +13,10 @@ import java.util.List;
 @ToString
 public class TeachplanNode extends Teachplan {
 
-    List<TeachplanNode> children;
+
+
+   private List<TeachplanNode> children;
+
+
 
 }
