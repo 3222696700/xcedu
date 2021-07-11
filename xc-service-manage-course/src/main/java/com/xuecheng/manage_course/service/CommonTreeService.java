@@ -20,13 +20,12 @@ public abstract class CommonTreeService<V,E> {
     public static final Logger LOGGER= LoggerFactory.getLogger(CommonTreeService.class);
 
     /**
-     * @param list
-     *
-     * @return
+     * @param list：domain集合
+     * @param vClass :dto的class类
+     * @return List<V> ：返回封装的dto树
      * @Description: 通用的递归生成树的方法
      * 1、将domain集合转换成dto集合
-     * 2、
-     * 3、
+     * 2、使用用户自定义方法将dto集合转换为树状结构
      * @Author: ghost
      * @Date:2021/6/12
      *
@@ -38,7 +37,7 @@ public abstract class CommonTreeService<V,E> {
 
         if(CollectionUtils.isEmpty(vlist)){
             LOGGER.info("转换的dto集合为空，vlist{}",vlist);
-            return new CopyOnWriteArrayList<V>();
+            return new CopyOnWriteArrayList<>();
         }
         return domainListToTree(vlist);
     }
@@ -57,17 +56,15 @@ public abstract class CommonTreeService<V,E> {
     public  List<V> convertDomainToDto(List<E> elist,Class<V> vClass) throws IllegalAccessException, InstantiationException {
         if(CollectionUtils.isEmpty(elist)){
             LOGGER.info("传入参数elist为空，elist{}",elist);
-            return new CopyOnWriteArrayList<V>();
+            return new CopyOnWriteArrayList<>();
         }
-        List<V> vList=new CopyOnWriteArrayList<V>();
+        List<V> vList= new CopyOnWriteArrayList<>();
 
         for (E e:elist){
-
                 V v=vClass.newInstance();
-                BeanUtils.copyProperties(e, v);
-                vList.add(v);
+                    BeanUtils.copyProperties(e, v);
+                    vList.add(v);
         }
-
         return vList;
     }
 
@@ -86,7 +83,7 @@ public abstract class CommonTreeService<V,E> {
         if(CollectionUtils.isEmpty(vlist))
         {
             LOGGER.info("构建树的dto集合为空,vlist{}",vlist);
-            return Lists.<V>emptyList();
+            return Lists.emptyList();
         }
         return domainListToTreeCustom(vlist);
     }

@@ -14,4 +14,8 @@ import java.util.List;
 @Repository
 public interface TeachPlanMapper {
     List<Teachplan> getTeachPlanListByCourseId(String courseId);
+    List<Teachplan> findTeachPlanByCourseIdAndParentId(String courseId,String parentId);
+    int insertSelective(Teachplan record);
+
+    Teachplan selectTeachPlanById(String Id);
 }

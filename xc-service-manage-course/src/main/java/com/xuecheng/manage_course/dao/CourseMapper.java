@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CourseMapper {
    CourseBase findCourseBaseById(String id);
+
+
 }

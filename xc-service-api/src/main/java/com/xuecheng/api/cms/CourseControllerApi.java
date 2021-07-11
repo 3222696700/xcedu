@@ -1,6 +1,7 @@
 package com.xuecheng.api.cms;
 
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
+import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -15,4 +16,7 @@ public interface CourseControllerApi {
 
     @ApiOperation("根据提供的CourseId查询课程计划")
     public TeachplanNode queryTeachPlanByCourseId(String courseId);
+
+    @ApiOperation("根据提供的CourseId查询课程计划")
+    public ResponseResult addTeachPlan(TeachplanNode teachplanNode);
 }

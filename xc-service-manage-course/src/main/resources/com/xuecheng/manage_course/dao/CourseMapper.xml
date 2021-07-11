@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
         <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xuecheng.manage_course.dao.CourseMapper">
-<select id="findCourseBaseById" parameterType="java.lang.String"
+    <resultMap id="BaseResultMap" type="com.xuecheng.framework.domain.course.CourseBase" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="users" property="users" jdbcType="VARCHAR" />
+        <result column="mt" property="mt" jdbcType="VARCHAR" />
+        <result column="grade" property="grade" jdbcType="VARCHAR" />
+        <result column="studymodel" property="description" jdbcType="VARCHAR" />
+        <result column="teachmode" property="teachmode" jdbcType="VARCHAR" />
+        <result column="description" property="description" jdbcType="CLOB" />
+        <result column="st" property="st" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="VARCHAR" />
+        <result column="company_id" property="companyId" jdbcType="VARCHAR" />
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        `id`,`name`,`users`,`mt`,`grade`,`studymodel`,`teachmode`,`description`,`st`,`status`,`company_id`,`user_id`
+   </sql>
+    <select id="findCourseBaseById" parameterType="java.lang.String"
         resultType="com.xuecheng.framework.domain.course.CourseBase">
-        select * from course_base where id = #{id}
+        select
+        <include refid="Base_Column_List"/>
+        from course_base where id = #{id}
     </select>
+
 </mapper>
