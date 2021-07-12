@@ -2,18 +2,18 @@ package com.xuecheng.framework.utils;
 
 /**
  * @Auther:ghost
- * @Date:2021/7/8
+ * @Date:2021/7/12
  * @Description:com.xuecheng.framework.utils
  * @version:1.0
  */
-public class LevelUtil {
-
+public class GradeUtil {
     public static final String ROOT_LEVE="1";
 
+    public static final String ROOT_PARENT_ID="0";
 
-    public static String caculateLevel(String currentLevel){
-
-        Integer integer=Integer.parseInt(currentLevel);
+    public static final String CATEGORY_LEVEL_SEPARATOR="-";
+    public static String calculateNextGrade(String grade) {
+        Integer integer=Integer.parseInt(grade);
 
         int oldLevel=integer.intValue();
 
@@ -21,4 +21,6 @@ public class LevelUtil {
 
         return Integer.toString(newLevel);
     }
+
+
 }

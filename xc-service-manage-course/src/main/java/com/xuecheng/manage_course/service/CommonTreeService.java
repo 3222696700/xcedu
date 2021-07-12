@@ -98,4 +98,5 @@ public abstract class CommonTreeService<V,E> {
      *
      * */
     public abstract List<V> domainListToTreeCustom(List<V> vlist);
+
 }

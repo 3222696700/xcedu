@@ -1,6 +1,7 @@
 package com.xuecheng.manage_course.dao;
 
 import com.xuecheng.framework.domain.course.Teachplan;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 @Repository
 public interface TeachPlanMapper {
     List<Teachplan> getTeachPlanListByCourseId(String courseId);
-    List<Teachplan> findTeachPlanByCourseIdAndParentId(String courseId,String parentId);
+    List<Teachplan> findTeachPlanByCourseIdAndParentId(@Param("courseid") String courseId, @Param("parentid") String parentId);
     int insertSelective(Teachplan record);
 
     Teachplan selectTeachPlanById(String Id);

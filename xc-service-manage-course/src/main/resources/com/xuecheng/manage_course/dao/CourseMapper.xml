@@ -19,11 +19,17 @@
     <sql id="Base_Column_List" >
         `id`,`name`,`users`,`mt`,`grade`,`studymodel`,`teachmode`,`description`,`st`,`status`,`company_id`,`user_id`
    </sql>
+
     <select id="findCourseBaseById" parameterType="java.lang.String"
         resultType="com.xuecheng.framework.domain.course.CourseBase">
         select
         <include refid="Base_Column_List"/>
-        from course_base where id = #{id}
+        from `xc_course`.`course_base`  where id = #{id,jdbcType=VARCHAR};
     </select>
 
+    <select id="findAllCourseBase" resultType="com.xuecheng.framework.domain.course.CourseBase">
+        select
+        <include refid="Base_Column_List"/>
+        from `xc_course`.`course_base`
+    </select>
 </mapper>

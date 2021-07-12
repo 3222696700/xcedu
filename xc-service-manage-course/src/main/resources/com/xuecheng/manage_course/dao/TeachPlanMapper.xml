@@ -36,16 +36,14 @@
         SELECT
         <include refid="Base_Column_List"/>
         FROM `xc_course`.`teachplan` AS t1
-        <if test="parentid!=null and parentid!=''">
-        WHERE t1.`parentid`=#{parentid,jdbcType=VARCHAR}
-        </if>
-        <if test="courseid!=null and courseid!=''">
-        WHERE t1.`courseid` = #{courseid,jdbcType=VARCHAR}
-        </if>
-        <if test="courseid!=null and courseid!='' and parentid!=null and parentid!=''">
-            WHERE t1.`courseid` = #{courseid,jdbcType=VARCHAR}
-            AND t1.`parentid`=#{parentid,jdbcType=VARCHAR}
-        </if>
+        <where>
+            <if test="parentid!=null and parentid!=''">
+                AND t1.`parentid`=#{parentid,jdbcType=VARCHAR}
+             </if>
+             <if test="courseid!=null and courseid!='' and parentid!=null and parentid!=''">
+                AND t1.`courseid`=#{courseid,jdbcType=VARCHAR}
+             </if>
+        </where>
         ;
     </select>
 

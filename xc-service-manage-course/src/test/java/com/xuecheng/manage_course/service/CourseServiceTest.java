@@ -25,7 +25,7 @@ public class CourseServiceTest {
 
     @Test
     public void testGetTeachPlanWithTree() throws IllegalAccessException, InstantiationException {
-        List<TeachplanNode> list=courseService.getTeachPlanWithTree("297e7c7c62b888f00162b8a965510001");
+        List<TeachplanNode> list=courseService.getTeachPlanWithTree("4028e581617f945f01617f9dabc40000");
         System.out.println(list);
     }
 
@@ -33,9 +33,10 @@ public class CourseServiceTest {
     public void testaddTeachPlan(){
         TeachplanNode teachplanNode=new TeachplanNode();
 
-        teachplanNode.setCourseid("");
-        teachplanNode.setPname("");
+        teachplanNode.setCourseid("297e7c7c62b888f00162b8a965510001");
+        teachplanNode.setPname("添加测试");
         teachplanNode.setParentid("");
+
 
         courseService.addTeachPlan(teachplanNode);
     }
