@@ -13,6 +13,6 @@ import io.swagger.annotations.ApiOperation;
 @Api(value="cms数据字典接口")
 public interface SysDictionaryControllerApi {
 
-    @ApiOperation("根据id获取CmsPage配置信息")
-    public SysDictionary getModel(String code);
+    @ApiOperation("根据id获取数据字典信息")
+    public SysDictionary getModel(String dType);
 }
