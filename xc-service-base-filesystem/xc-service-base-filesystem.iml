@@ -154,5 +154,6 @@
     <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver:3.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:3.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:bson:3.4.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-configuration-processor:2.0.1.RELEASE" level="project" />
   </component>
 </module>

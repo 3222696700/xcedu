@@ -1,6 +1,6 @@
 package com.xuecheng.manage_course.handler;
 
-import com.xuecheng.api.cms.CourseControllerApi;
+import com.xuecheng.api.course.CourseControllerApi;
 import com.xuecheng.framework.domain.course.ext.CategoryNode;
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
 import com.xuecheng.framework.domain.course.request.CourseListRequest;

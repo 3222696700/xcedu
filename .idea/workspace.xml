@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810817f0-4767-4177-86e4-c8052edc4ef9" name="Default Changelist" comment="" />
+    <list default="true" id="810817f0-4767-4177-86e4-c8052edc4ef9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/filesystem/FileSystemControllerApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/config/FastFSConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/controller/FileSystemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/dao/FIleSystemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/util/FastDFSUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/test/java/com/xuecheng/filesystem/config/FastConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/filesystem/response/FileSystemCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/filesystem/response/FileSystemCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-govern-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-govern-center/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/cms/CourseControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CourseControllerApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/FileSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/FileSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/FileSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/FileSystemApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +97,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -97,7 +114,7 @@
       <recent name="F:\xcedu\xc-service-manage-cms-client\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SysDictionaryServiceTest.testFindSysDictionaryBydType">
+  <component name="RunManager" selected="JUnit.FastConfigTest.testFfastConfig">
     <configuration name="CategoryMapperTest.testFindAllCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xc-service-manage-course" />
       <extension name="coverage">
@@ -130,22 +147,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CourseServiceTest.testGetTeachPlanWithTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xc-service-manage-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xuecheng.manage_course.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.service" />
-      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.service.CourseServiceTest" />
-      <option name="METHOD_NAME" value="testGetTeachPlanWithTree" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CourseServiceTest.testaddTeachPlan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xc-service-manage-course" />
       <extension name="coverage">
@@ -157,6 +158,22 @@
       <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.service" />
       <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.service.CourseServiceTest" />
       <option name="METHOD_NAME" value="testaddTeachPlan" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FastConfigTest.testFfastConfig" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xc-service-base-filesystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xuecheng.filesystem.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xuecheng.filesystem.config" />
+      <option name="MAIN_CLASS_NAME" value="com.xuecheng.filesystem.config.FastConfigTest" />
+      <option name="METHOD_NAME" value="testFfastConfig" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,7 +224,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CourseServiceTest.testGetTeachPlanWithTree" />
       <item itemvalue="JUnit.CourseServiceTest.testaddTeachPlan" />
       <item itemvalue="JUnit.CategoryMapperTest.testFindAllCategory" />
       <item itemvalue="JUnit.CategoryServiceTest.testGetCategoryWithTree" />
@@ -216,14 +232,15 @@
       <item itemvalue="Spring Boot.ManageCourseApplication" />
       <item itemvalue="Spring Boot.ManageCmsApplication" />
       <item itemvalue="Spring Boot.FileSystemApplication" />
+      <item itemvalue="JUnit.FastConfigTest.testFfastConfig" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FastConfigTest.testFfastConfig" />
         <item itemvalue="JUnit.SysDictionaryServiceTest.testFindSysDictionaryBydType" />
         <item itemvalue="JUnit.CategoryServiceTest.testGetCategoryWithTree" />
         <item itemvalue="JUnit.CategoryMapperTest.testFindAllCategory" />
         <item itemvalue="JUnit.CourseServiceTest.testaddTeachPlan" />
-        <item itemvalue="JUnit.CourseServiceTest.testGetTeachPlanWithTree" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +311,7 @@
       <workItem from="1625903765154" duration="771000" />
       <workItem from="1625969503807" duration="14022000" />
       <workItem from="1626074676935" duration="24450000" />
-      <workItem from="1626143909347" duration="1241000" />
+      <workItem from="1626143909347" duration="12301000" />
     </task>
     <task id="LOCAL-00001" summary="改动如下：&#10;1、学成教育项目基础工程导入完毕&#10;2、新建xc-service-manage-cms模块">
       <created>1623592234235</created>
@@ -429,14 +446,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1625651059503" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626086025034">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626145926929">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626086025034" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626145926929" />
     <state x="362" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1625796519234">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="362" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1625796519234" />
+    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626146011803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1626146011803" />
     <state x="472" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1625796520364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -461,38 +482,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626145159040" />
-    <state width="1493" height="415" key="GridCell.Tab.0.bottom" timestamp="1626144769525">
+    <state width="1493" height="298" key="GridCell.Tab.0.bottom" timestamp="1626156794442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="415" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626144769525" />
-    <state width="1493" height="415" key="GridCell.Tab.0.center" timestamp="1626144769525">
+    <state width="1493" height="298" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
+    <state width="1493" height="298" key="GridCell.Tab.0.center" timestamp="1626156794442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="415" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626144769525" />
-    <state width="1493" height="415" key="GridCell.Tab.0.left" timestamp="1626144769524">
+    <state width="1493" height="298" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
+    <state width="1493" height="298" key="GridCell.Tab.0.left" timestamp="1626156794442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="415" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626144769524" />
-    <state width="1493" height="415" key="GridCell.Tab.0.right" timestamp="1626144769525">
+    <state width="1493" height="298" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
+    <state width="1493" height="298" key="GridCell.Tab.0.right" timestamp="1626156794442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="415" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626144769525" />
-    <state width="1493" height="298" key="GridCell.Tab.1.bottom" timestamp="1626102015223">
+    <state width="1493" height="298" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
+    <state width="1493" height="298" key="GridCell.Tab.1.bottom" timestamp="1626156794443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626102015223" />
-    <state width="1493" height="298" key="GridCell.Tab.1.center" timestamp="1626102015223">
+    <state width="1493" height="298" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626156794443" />
+    <state width="1493" height="298" key="GridCell.Tab.1.center" timestamp="1626156794442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626102015223" />
-    <state width="1493" height="298" key="GridCell.Tab.1.left" timestamp="1626102015222">
+    <state width="1493" height="298" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
+    <state width="1493" height="298" key="GridCell.Tab.1.left" timestamp="1626156794442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626102015222" />
-    <state width="1493" height="298" key="GridCell.Tab.1.right" timestamp="1626102015223">
+    <state width="1493" height="298" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
+    <state width="1493" height="298" key="GridCell.Tab.1.right" timestamp="1626156794443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626102015223" />
+    <state width="1493" height="298" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626156794443" />
     <state width="1493" height="252" key="GridCell.Tab.2.bottom" timestamp="1625407982339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -513,10 +534,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="429" y="110" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1626145162238" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1626145165508">
+    <state x="270" y="0" key="SettingsEditor" timestamp="1626148752933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626145165508" />
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626148752933" />
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog" timestamp="1623753531463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

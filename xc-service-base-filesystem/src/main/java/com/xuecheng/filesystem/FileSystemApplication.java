@@ -1,8 +1,10 @@
 package com.xuecheng.filesystem;
 
+import org.csource.fastdfs.TrackerClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -19,5 +21,9 @@ public class FileSystemApplication {
         SpringApplication.run(FileSystemApplication.class,args);
     }
 
+    @Bean
+    public TrackerClient trackerClient(){
+        return new TrackerClient();
+    }
 
 }

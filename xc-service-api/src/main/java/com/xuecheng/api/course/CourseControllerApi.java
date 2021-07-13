@@ -1,4 +1,4 @@
-package com.xuecheng.api.cms;
+package com.xuecheng.api.course;
 
 import com.xuecheng.framework.domain.course.ext.CategoryNode;
 import com.xuecheng.framework.domain.course.ext.CourseInfo;
