@@ -1,11 +1,16 @@
 package com.xuecheng.filesystem.config;
 
-import lombok.Data;
+import com.xuecheng.framework.domain.filesystem.response.FileSystemCode;
+import com.xuecheng.framework.exception.ExceptionCast;
+import org.csource.common.MyException;
+import org.csource.fastdfs.*;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableMBeanExport;
-import org.springframework.jmx.support.RegistrationPolicy;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -15,8 +20,6 @@ import java.util.List;
  * @version:1.0
  */
 @Configuration
-@EnableMBeanExport(registration = RegistrationPolicy.IGNORE_EXISTING)
-@Data
 public class FastFSConfig {
 
     @Value("${xuecheng.fastdfs.charset}")
@@ -32,6 +35,34 @@ public class FastFSConfig {
     private List<String> trackerServersList;
 
 
+    @Bean
+    public TrackerClient trackerClient(){
 
+        ClientGlobal.setG_charset(charSet);
+        ClientGlobal.setG_connect_timeout(connectTimeoutSeconds);
+        ClientGlobal.setG_network_timeout(networkTimeoutSeconds);
+        try {
+            ClientGlobal.initByTrackers(trackerServersList.get(0));
+        }catch (IOException | MyException e){
+            e.printStackTrace();
+            ExceptionCast.cast(FileSystemCode.FS_SYSTEM_INIT_ERROR);
+        }
+        return new TrackerClient();
+    }
 
+    @Bean
+    @ConditionalOnBean(TrackerClient.class)
+    public StorageClient1 storageClient1(@Qualifier(value = "trackerClient") TrackerClient trackerClient) {
+        TrackerServer trackerServer=null;
+        StorageServer storageServer=null;
+        try {
+             trackerServer = trackerClient.getConnection();
+             storageServer = trackerClient.getStoreStorage(trackerServer);
+        }catch (IOException e){
+            e.printStackTrace();
+            ExceptionCast.cast(FileSystemCode.FS_SYSTEM_INIT_ERROR);
+        }
+            return new StorageClient1(trackerServer, storageServer);
+
+    }
 }

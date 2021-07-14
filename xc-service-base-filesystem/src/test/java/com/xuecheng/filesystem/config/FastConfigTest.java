@@ -17,7 +17,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 public class FastConfigTest {
 
-
     @Autowired
     ApplicationContext applicationContext;
 
@@ -26,6 +25,4 @@ public class FastConfigTest {
        FastFSConfig fastFSConfig= applicationContext.getBean(FastFSConfig.class);
        System.out.println(fastFSConfig);
     }
-
-
 }
