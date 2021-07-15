@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xc-service-eureka-server:war">
+    <output-path>$PROJECT_DIR$/xc-service-eureka-server/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xc-service-eureka-server</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xc-service-eureka-server.war">
+      <element id="artifact" artifact-name="xc-service-eureka-server:war exploded" />
+    </root>
+  </artifact>
+</component>

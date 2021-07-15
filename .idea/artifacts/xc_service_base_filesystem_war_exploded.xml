@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="xc-service-base-filesystem:war exploded">
+    <output-path>$PROJECT_DIR$/xc-service-base-filesystem/target/xc-service-base-filesystem</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>xc-service-base-filesystem</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="xc-service-base-filesystem" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/xc-service-base-filesystem/target/xc-service-base-filesystem/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="xc-service-base-filesystem/web/Web" />
+    </root>
+  </artifact>
+</component>

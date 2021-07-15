@@ -5,7 +5,10 @@ import com.xuecheng.filesystem.service.FileSystemService;
 import com.xuecheng.framework.domain.filesystem.request.FileSystemRequest;
 import com.xuecheng.framework.domain.filesystem.response.UploadFileResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -23,7 +26,7 @@ public class FileSystemController implements FileSystemControllerApi {
 
     @PostMapping("/upload")
     @Override
-    public UploadFileResult uploadFile(@RequestParam("file") MultipartFile multipartFile,FileSystemRequest fileSystemRequest) {
+    public UploadFileResult uploadFile(@RequestParam("file") MultipartFile multipartFile, FileSystemRequest fileSystemRequest) {
 
         return fileSystemService.uploadFile(multipartFile,fileSystemRequest);
 

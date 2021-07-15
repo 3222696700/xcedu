@@ -8,9 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="xc-framework-common" />
-        <module name="xc-service-eureka-server" />
         <module name="xc-framework-model" />
         <module name="xc-framework-utils" />
+        <module name="xc-service-eureka-server" />
         <module name="xc-service-api" />
         <module name="xc-service-base-filesystem" />
         <module name="xc-service-manage-course" />
@@ -41,6 +41,7 @@
       <module name="xc-govern-center" options="-parameters" />
       <module name="xc-service-api" options="-parameters" />
       <module name="xc-service-base-filesystem" options="-parameters" />
+      <module name="xc-service-eureka-server" options="-parameters" />
       <module name="xc-service-manage-cms" options="-parameters" />
       <module name="xc-service-manage-cms-client" options="-parameters" />
       <module name="xc-service-manage-course" options="-parameters" />

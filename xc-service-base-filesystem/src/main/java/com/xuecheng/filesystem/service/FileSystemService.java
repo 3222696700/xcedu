@@ -52,7 +52,7 @@ public class FileSystemService
         return fastDFSUtil.uploadFile(multipartFile);
     }
 
-    public FileSystem savaFileSysTemToMongodb(String fileId,FileSystemRequest fileSystemRequest,MultipartFile multipartFile){
+    public FileSystem savaFileSysTemToMongodb(String fileId, FileSystemRequest fileSystemRequest, MultipartFile multipartFile){
         FileSystem fileSystem=new FileSystem();
         fileSystem.setFileId(fileId);
         fileSystem.setFilePath(fileId);
@@ -63,7 +63,7 @@ public class FileSystemService
         String metaData=fileSystemRequest.getMetadata();
 
         if(!(StringUtils.isEmpty(metaData))){
-            Map map= JSON.parseObject(metaData,Map.class);
+            Map map= JSON.parseObject(metaData, Map.class);
             fileSystem.setMetadata(map);
         }
         fileSystem.setBusinesskey(fileSystemRequest.getBusinesskey());

@@ -10,17 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>xc-service-manage-course</artifactId>
-    <packaging>war</packaging>
-
-    <name>xc-service-manage-course Maven Webapp</name>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
-
 
     <dependencies>
         <dependency>
@@ -63,7 +52,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${springframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

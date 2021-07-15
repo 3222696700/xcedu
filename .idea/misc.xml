@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/xc-govern-center" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-base-filesystem" />
+    <file type="web" url="file://$PROJECT_DIR$/xc-service-eureka-server" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms-client" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-course" />
@@ -17,8 +18,8 @@
         <option value="$PROJECT_DIR$/xc-framework-model/pom.xml" />
         <option value="$PROJECT_DIR$/xc-framework-utils/pom.xml" />
         <option value="$PROJECT_DIR$/xc-service-api/pom.xml" />
-        <option value="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" />
         <option value="$PROJECT_DIR$/xc-framework-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -9,5 +9,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @Description:com.xuecheng.filesystem.dao
  * @version:1.0
  */
-public interface FIleSystemRepository extends MongoRepository<FileSystem,String> {
+public interface FIleSystemRepository extends MongoRepository<FileSystem, String> {
 }

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xc-service-base-filesystem:war">
+    <output-path>$PROJECT_DIR$/xc-service-base-filesystem/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xc-service-base-filesystem</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xc-service-base-filesystem.war">
+      <element id="artifact" artifact-name="xc-service-base-filesystem:war exploded" />
+    </root>
+  </artifact>
+</component>
