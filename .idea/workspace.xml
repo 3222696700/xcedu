@@ -2,22 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810817f0-4767-4177-86e4-c8052edc4ef9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/filesystem/FileSystemControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/config/FastFSConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/controller/FileSystemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/dao/FIleSystemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/util/FastDFSUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/test/java/com/xuecheng/filesystem/config/FastConfigTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/filesystem/response/FileSystemCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/filesystem/response/FileSystemCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-govern-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-govern-center/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/cms/CourseControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CourseControllerApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/FileSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/FileSystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/FileSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/FileSystemApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/test/java/com/xuecheng/filesystem/controller/FileSystemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CoursePicMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CoursePicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/dao/CoursePicMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/TeachplanServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/CoursePic.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/CoursePic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/response/CourseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/response/CourseCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CoursePic.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CoursePic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/filesystem/FileSystemControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/filesystem/FileSystemControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseControllerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/filesystem/FileSystemControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/filesystem/FileSystemControllerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/controller/FileSystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/controller/FileSystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/service/FileSystemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/service/FileSystemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/controller/FileSystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/controller/FileSystemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/service/FileSystemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/service/FileSystemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/config/FastConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/config/FastConfigTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CourseBaseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CourseBaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/TeachPlanMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/TeachPlanMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CourseBaseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/dao/CourseMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/dao/CourseBaseMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/CourseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/CourseServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseBaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/handler/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/handler/CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CourseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/dao/CourseMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/service/CourseServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/service/CourseServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,14 +113,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xc-service-base-filesystem" />
+    <property name="last_opened_file_path" value="E:/WorkSpace/23patarrn" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="spring.boot" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.xuecheng.filesystem.service" />
       <recent name="com.xuecheng.manage_course" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -114,8 +135,8 @@
       <recent name="F:\xcedu\xc-service-manage-cms-client\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FastConfigTest.testFfastConfig">
-    <configuration name="CategoryMapperTest.testFindAllCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CourseServiceTest.testSaveCoursePic">
+    <configuration name="CoursePicMapperTest.testSaveCoursePic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xc-service-manage-course" />
       <extension name="coverage">
         <pattern>
@@ -124,30 +145,46 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.dao.CategoryMapperTest" />
-      <option name="METHOD_NAME" value="testFindAllCategory" />
+      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.dao.CoursePicMapperTest" />
+      <option name="METHOD_NAME" value="testSaveCoursePic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryServiceTest.testGetCategoryWithTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CoursePicMapperTest.testSelectCoursePicByCourseId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xc-service-manage-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xuecheng.manage_course.service.*" />
+          <option name="PATTERN" value="com.xuecheng.manage_course.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.service" />
-      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.service.CategoryServiceTest" />
-      <option name="METHOD_NAME" value="testGetCategoryWithTree" />
+      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.dao.CoursePicMapperTest" />
+      <option name="METHOD_NAME" value="testSelectCoursePicByCourseId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CourseServiceTest.testaddTeachPlan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CoursePicMapperTest.testUpdateCoursePic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xc-service-manage-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xuecheng.manage_course.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.dao.CoursePicMapperTest" />
+      <option name="METHOD_NAME" value="testUpdateCoursePic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseServiceTest.testBoolean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xc-service-manage-course" />
       <extension name="coverage">
         <pattern>
@@ -157,39 +194,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.service" />
       <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.service.CourseServiceTest" />
-      <option name="METHOD_NAME" value="testaddTeachPlan" />
+      <option name="METHOD_NAME" value="testBoolean" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FastConfigTest.testFfastConfig" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xc-service-base-filesystem" />
+    <configuration name="CourseServiceTest.testSaveCoursePic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xc-service-manage-course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xuecheng.filesystem.config.*" />
+          <option name="PATTERN" value="com.xuecheng.manage_course.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.xuecheng.filesystem.config" />
-      <option name="MAIN_CLASS_NAME" value="com.xuecheng.filesystem.config.FastConfigTest" />
-      <option name="METHOD_NAME" value="testFfastConfig" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SysDictionaryServiceTest.testFindSysDictionaryBydType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xc-service-manage-cms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xuecheng.manage_cms.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xuecheng.manage_cms.service" />
-      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_cms.service.SysDictionaryServiceTest" />
-      <option name="METHOD_NAME" value="testFindSysDictionaryBydType" />
+      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.service" />
+      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.service.CourseServiceTest" />
+      <option name="METHOD_NAME" value="testSaveCoursePic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,23 +245,23 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CourseServiceTest.testaddTeachPlan" />
-      <item itemvalue="JUnit.CategoryMapperTest.testFindAllCategory" />
-      <item itemvalue="JUnit.CategoryServiceTest.testGetCategoryWithTree" />
-      <item itemvalue="JUnit.SysDictionaryServiceTest.testFindSysDictionaryBydType" />
+      <item itemvalue="JUnit.CoursePicMapperTest.testSaveCoursePic" />
+      <item itemvalue="JUnit.CoursePicMapperTest.testUpdateCoursePic" />
+      <item itemvalue="JUnit.CoursePicMapperTest.testSelectCoursePicByCourseId" />
+      <item itemvalue="JUnit.CourseServiceTest.testSaveCoursePic" />
+      <item itemvalue="JUnit.CourseServiceTest.testBoolean" />
       <item itemvalue="Spring Boot.CmsClientApplication" />
       <item itemvalue="Spring Boot.ManageCourseApplication" />
       <item itemvalue="Spring Boot.ManageCmsApplication" />
       <item itemvalue="Spring Boot.FileSystemApplication" />
-      <item itemvalue="JUnit.FastConfigTest.testFfastConfig" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FastConfigTest.testFfastConfig" />
-        <item itemvalue="JUnit.SysDictionaryServiceTest.testFindSysDictionaryBydType" />
-        <item itemvalue="JUnit.CategoryServiceTest.testGetCategoryWithTree" />
-        <item itemvalue="JUnit.CategoryMapperTest.testFindAllCategory" />
-        <item itemvalue="JUnit.CourseServiceTest.testaddTeachPlan" />
+        <item itemvalue="JUnit.CourseServiceTest.testSaveCoursePic" />
+        <item itemvalue="JUnit.CoursePicMapperTest.testSaveCoursePic" />
+        <item itemvalue="JUnit.CourseServiceTest.testBoolean" />
+        <item itemvalue="JUnit.CoursePicMapperTest.testSelectCoursePicByCourseId" />
+        <item itemvalue="JUnit.CoursePicMapperTest.testUpdateCoursePic" />
       </list>
     </recent_temporary>
   </component>
@@ -312,6 +333,12 @@
       <workItem from="1625969503807" duration="14022000" />
       <workItem from="1626074676935" duration="24450000" />
       <workItem from="1626143909347" duration="12301000" />
+      <workItem from="1626180285511" duration="1215000" />
+      <workItem from="1626186529155" duration="3433000" />
+      <workItem from="1626226891137" duration="2386000" />
+      <workItem from="1626230299721" duration="2928000" />
+      <workItem from="1626250791176" duration="20028000" />
+      <workItem from="1626313712970" duration="1468000" />
     </task>
     <task id="LOCAL-00001" summary="改动如下：&#10;1、学成教育项目基础工程导入完毕&#10;2、新建xc-service-manage-cms模块">
       <created>1623592234235</created>
@@ -397,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626144048383</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="改动如下：&#10;1、完成FastDFS环境搭建，完成FastDFSConfig封装且测试通过。">
+      <created>1626230981810</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626230981810</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +461,8 @@
     <MESSAGE value="改动如下：&#10;1、完成递归生成课程计划树开发，后端调试通过，前端调试失败。&#10;&#10;2、完成递归生成课程计划树的单元测试" />
     <MESSAGE value="改动如下：&#10;1、完成课程计划添加接口开发&#10;&#10;2、课程计划添加接口单元测试通过" />
     <MESSAGE value="改动如下：&#10;1、修复了课程计划树的BUG,修复了新增课程计划的BUG。&#10;&#10;2、完成CategoryNode递归输出树的开发。" />
-    <option name="LAST_COMMIT_MESSAGE" value="改动如下：&#10;1、修复了课程计划树的BUG,修复了新增课程计划的BUG。&#10;&#10;2、完成CategoryNode递归输出树的开发。" />
+    <MESSAGE value="改动如下：&#10;1、完成FastDFS环境搭建，完成FastDFSConfig封装且测试通过。" />
+    <option name="LAST_COMMIT_MESSAGE" value="改动如下：&#10;1、完成FastDFS环境搭建，完成FastDFSConfig封装且测试通过。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Assign_Data_Sources" timestamp="1625711819898">
@@ -446,26 +481,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1625651059503" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626145926929">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626255179823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626145926929" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626255179823" />
     <state x="362" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1625796519234">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="362" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1625796519234" />
-    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626146011803">
+    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626230859725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1626146011803" />
+    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1626230859725" />
     <state x="472" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1625796520364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="472" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1625796520364" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626080313385">
+    <state x="194" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1626270303987">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1626080313385" />
+    <state x="194" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1626270303987" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626270706618">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1626270706618" />
     <state x="172" y="78" key="#org.intellij.plugins.intelliLang.inject.config.ui.BaseInjectionDialog" timestamp="1625892885843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -474,70 +513,70 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="254" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1626144396437" />
-    <state x="350" y="111" key="CommitChangelistDialog2" timestamp="1626144039102">
+    <state x="350" y="111" key="CommitChangelistDialog2" timestamp="1626230976066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="350" y="111" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626144039102" />
-    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1626145159040">
+    <state x="350" y="111" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626230976066" />
+    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1626265449124">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626145159040" />
-    <state width="1493" height="298" key="GridCell.Tab.0.bottom" timestamp="1626156794442">
+    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626265449124" />
+    <state width="1493" height="298" key="GridCell.Tab.0.bottom" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
-    <state width="1493" height="298" key="GridCell.Tab.0.center" timestamp="1626156794442">
+    <state width="1493" height="298" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.0.center" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
-    <state width="1493" height="298" key="GridCell.Tab.0.left" timestamp="1626156794442">
+    <state width="1493" height="298" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.0.left" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
-    <state width="1493" height="298" key="GridCell.Tab.0.right" timestamp="1626156794442">
+    <state width="1493" height="298" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.0.right" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
-    <state width="1493" height="298" key="GridCell.Tab.1.bottom" timestamp="1626156794443">
+    <state width="1493" height="298" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.1.bottom" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626156794443" />
-    <state width="1493" height="298" key="GridCell.Tab.1.center" timestamp="1626156794442">
+    <state width="1493" height="298" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.1.center" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
-    <state width="1493" height="298" key="GridCell.Tab.1.left" timestamp="1626156794442">
+    <state width="1493" height="298" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.1.left" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626156794442" />
-    <state width="1493" height="298" key="GridCell.Tab.1.right" timestamp="1626156794443">
+    <state width="1493" height="298" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.1.right" timestamp="1626271469398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626156794443" />
-    <state width="1493" height="252" key="GridCell.Tab.2.bottom" timestamp="1625407982339">
+    <state width="1493" height="298" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="298" key="GridCell.Tab.2.bottom" timestamp="1626258694381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625407982339" />
-    <state width="1493" height="252" key="GridCell.Tab.2.center" timestamp="1625407982339">
+    <state width="1493" height="298" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626258694381" />
+    <state width="1493" height="298" key="GridCell.Tab.2.center" timestamp="1626258694381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1625407982339" />
-    <state width="1493" height="252" key="GridCell.Tab.2.left" timestamp="1625407982339">
+    <state width="1493" height="298" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1626258694381" />
+    <state width="1493" height="298" key="GridCell.Tab.2.left" timestamp="1626258694381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1625407982339" />
-    <state width="1493" height="252" key="GridCell.Tab.2.right" timestamp="1625407982339">
+    <state width="1493" height="298" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1626258694381" />
+    <state width="1493" height="298" key="GridCell.Tab.2.right" timestamp="1626258694381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="252" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1625407982339" />
+    <state width="1493" height="298" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1626258694381" />
     <state x="429" y="110" key="NewModule_or_Project.wizard" timestamp="1626145162238">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="429" y="110" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1626145162238" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1626148752933">
+    <state x="270" y="0" key="SettingsEditor" timestamp="1626266017195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626148752933" />
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626266017195" />
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog" timestamp="1623753531463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -566,10 +605,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1625894173361" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1625894756828">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1626187487605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1625894756828" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1626187487605" />
     <state x="510" y="70" key="spring file set editor" timestamp="1623165645503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

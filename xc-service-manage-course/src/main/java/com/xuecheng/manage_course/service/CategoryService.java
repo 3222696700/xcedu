@@ -48,22 +48,6 @@ public class CategoryService extends CommonTreeService<CategoryNode,Category> im
 
         Multimap<String, CategoryNode> levelDtoMultimap = ArrayListMultimap.create();
 
-//        String rootLevel=null;
-//
-//        for(CategoryNode c:vlist){
-//            levelDtoMultimap.put(c.getId(),c);
-//
-//            if(GradeUtil.ROOT_PARENT_ID.equals(c.getParentid())){
-//                rootList.add(c);
-//                rootLevel= CategoryNodeLevelUtil.calculateNextCategoryGrade(c);
-//                transformDepartmentTree(rootList,rootLevel,levelDtoMultimap);
-//            }
-//
-//
-//        }
-//        rootList.sort(this);
-//
-//        return rootList;
         for (CategoryNode c : vlist) {
             levelDtoMultimap.put(c.getParentid(), c);
             if(CategoryNodeLevelUtil.ROOT_PARENT_ID.equals(c.getParentid())){
@@ -74,8 +58,8 @@ public class CategoryService extends CommonTreeService<CategoryNode,Category> im
 
         return rootList;
     }
-    public void transformDepartmentTree(List<CategoryNode> list, Multimap<String,CategoryNode> dtoMap)  {
 
+    public void transformDepartmentTree(List<CategoryNode> list, Multimap<String,CategoryNode> dtoMap)  {
         for(CategoryNode dto:list)
         {
             List<CategoryNode> childrenList=(List<CategoryNode>) dtoMap.get(dto.getId());

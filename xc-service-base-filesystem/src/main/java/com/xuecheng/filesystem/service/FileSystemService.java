@@ -41,7 +41,6 @@ public class FileSystemService
 
         if(StringUtils.isEmpty(fileId)){
             ExceptionCast.cast(FileSystemCode.FS_UPLOADFILE_FILEISNULL);
-
             return new UploadFileResult(CommonCode.FAIL, null);
         }
         FileSystem fileSystem=savaFileSysTemToMongodb(fileId,fileSystemRequest,multipartFile);
@@ -54,7 +53,6 @@ public class FileSystemService
     }
 
     public FileSystem savaFileSysTemToMongodb(String fileId,FileSystemRequest fileSystemRequest,MultipartFile multipartFile){
-
         FileSystem fileSystem=new FileSystem();
         fileSystem.setFileId(fileId);
         fileSystem.setFilePath(fileId);

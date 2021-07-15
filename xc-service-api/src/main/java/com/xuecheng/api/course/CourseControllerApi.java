@@ -1,5 +1,6 @@
 package com.xuecheng.api.course;
 
+import com.xuecheng.framework.domain.course.CoursePic;
 import com.xuecheng.framework.domain.course.ext.CategoryNode;
 import com.xuecheng.framework.domain.course.ext.CourseInfo;
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
@@ -8,6 +9,8 @@ import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+
+import java.util.List;
 
 /**
  * @Auther:ghost
@@ -19,14 +22,19 @@ import io.swagger.annotations.ApiOperation;
 public interface CourseControllerApi {
 
     @ApiOperation("根据提供的CourseId查询课程计划")
-    public TeachplanNode queryTeachPlanByCourseId(String courseId);
+    TeachplanNode queryTeachPlanByCourseId(String courseId);
 
     @ApiOperation("添加课程计划")
-    public ResponseResult addTeachPlan(TeachplanNode teachplanNode);
+    ResponseResult addTeachPlan(TeachplanNode teachplanNode);
 
-    @ApiOperation("根据提供的CourseId查询课程计划")
-    public QueryResponseResult<CourseInfo> findAllCourse(Integer page, Integer size, CourseListRequest courseListRequest);
+    @ApiOperation("分页查询课程")
+    QueryResponseResult<CourseInfo> findAllCourse(Integer page, Integer size, CourseListRequest courseListRequest);
 
-    @ApiOperation("根据提供的CourseId查询课程计划")
-    public CategoryNode findAllCategory();
+    @ApiOperation("查询所有课程类别")
+    List<CategoryNode> findAllCategory();
+
+
+    @ApiOperation("")
+    ResponseResult saveCoursePic(CoursePic coursePic);
+
 }

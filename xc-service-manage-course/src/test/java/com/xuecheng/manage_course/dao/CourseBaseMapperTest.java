@@ -17,9 +17,9 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class CourseMapperTest {
+public class CourseBaseMapperTest {
     @Autowired
-    CourseMapper courseMapper;
+    CourseBaseMapper courseMapper;
 
     @Test
     public void testFindCourseBaseById(){

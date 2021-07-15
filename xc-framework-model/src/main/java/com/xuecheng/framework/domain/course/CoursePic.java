@@ -1,6 +1,7 @@
 package com.xuecheng.framework.domain.course;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -15,6 +16,7 @@ import java.io.Serializable;
 @Entity
 @Table(name="course_pic")
 @GenericGenerator(name = "jpa-assigned", strategy = "assigned")
+@EqualsAndHashCode
 public class CoursePic implements Serializable {
     private static final long serialVersionUID = -916357110051689486L;
 

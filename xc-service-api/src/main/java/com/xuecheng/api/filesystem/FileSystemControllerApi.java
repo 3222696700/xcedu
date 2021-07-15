@@ -1,11 +1,10 @@
 package com.xuecheng.api.filesystem;
 
+import com.xuecheng.framework.domain.filesystem.request.FileSystemRequest;
 import com.xuecheng.framework.domain.filesystem.response.UploadFileResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.util.Map;
 
 /**
  * @Auther:ghost
@@ -17,5 +16,6 @@ import java.util.Map;
 public interface FileSystemControllerApi {
 
     @ApiOperation("文件上传")
-    UploadFileResult uploadFile(MultipartFile multipartFile, Map otherPropertisMap);
+    UploadFileResult uploadFile(MultipartFile multipartFile, FileSystemRequest fileSystemRequest);
+
 }

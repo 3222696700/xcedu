@@ -17,6 +17,5 @@ public interface TeachPlanMapper {
     List<Teachplan> getTeachPlanListByCourseId(String courseId);
     List<Teachplan> findTeachPlanByCourseIdAndParentId(@Param("courseid") String courseId, @Param("parentid") String parentId);
     int insertSelective(Teachplan record);
-
     Teachplan selectTeachPlanById(String Id);
 }
