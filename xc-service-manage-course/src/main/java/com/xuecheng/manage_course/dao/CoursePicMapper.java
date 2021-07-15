@@ -16,4 +16,6 @@ public interface CoursePicMapper {
     CoursePic selectCoursePicByCourseId(String courseid);
 
     Integer  updateCoursePic(CoursePic coursePic);
+
+    Integer deleteCoursePicByCourseid(String courseid);
 }

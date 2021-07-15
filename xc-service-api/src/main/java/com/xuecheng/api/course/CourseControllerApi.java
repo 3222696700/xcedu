@@ -27,14 +27,22 @@ public interface CourseControllerApi {
     @ApiOperation("添加课程计划")
     ResponseResult addTeachPlan(TeachplanNode teachplanNode);
 
-    @ApiOperation("分页查询课程")
-    QueryResponseResult<CourseInfo> findAllCourse(Integer page, Integer size, CourseListRequest courseListRequest);
+
 
     @ApiOperation("查询所有课程类别")
     List<CategoryNode> findAllCategory();
 
 
-    @ApiOperation("")
+
+    @ApiOperation("保存课程图片")
     ResponseResult saveCoursePic(CoursePic coursePic);
 
+    @ApiOperation("根据课程id查询课程图片")
+    CoursePic queryCoursePicByCourseid(String courseid);
+
+    @ApiOperation("根据课程id删除课程图片")
+    ResponseResult deleteCoursePicByCourseid(String courseid);
+
+    @ApiOperation("分页查询课程")
+    QueryResponseResult<CourseInfo> findAllCourse(Integer page, Integer size, CourseListRequest courseListRequest);
 }

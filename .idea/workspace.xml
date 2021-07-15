@@ -2,42 +2,196 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810817f0-4767-4177-86e4-c8052edc4ef9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/test/java/com/xuecheng/filesystem/controller/FileSystemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CoursePicMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CoursePicMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/dao/CoursePicMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/TeachplanServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/CoursePic.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/CoursePic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/response/CourseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/response/CourseCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CoursePic.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CoursePic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsConfigModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsPageParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsSite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsSiteServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/ext/CmsPageExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/ext/CmsTemplateExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/request/QueryPageRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/response/CmsCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/response/CmsPageResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/response/CoursePreviewResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/response/GenerateHtmlResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CourseBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CourseIndex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CourseMarket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CourseOff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CoursePic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CoursePre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CoursePub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/Teachplan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/TeachplanMedia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/ext/CategoryNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/ext/CategoryParameter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/ext/CourseInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/ext/TeachplanExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/ext/TeachplanNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/ext/TeachplanParameter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/request/CourseListRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/response/AddCourseResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/response/CourseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/response/DeleteCourseResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/filesystem/FileSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/filesystem/request/FileSystemRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/filesystem/response/FileSystemCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/filesystem/response/UploadFileResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/learning/XcLearningCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/learning/XcLearningList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/MediaFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/MediaFileProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/MediaFileProcess_m3u8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/MediaVideoCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/MediaVideoCourseSimple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/request/QueryMediaFileRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/response/CheckChunkResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/response/MediaCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/response/MediaCourseResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/media/response/MediaFileResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/XcOrders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/XcOrdersDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/XcOrdersPay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/request/CreateOrderRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/request/weixinPayInformRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/response/CreateOrderResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/response/OrderCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/response/OrderResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/response/PayOrderResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/order/response/PayQrcodeResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/portalview/PreViewCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/portalview/PreViewCourseMedia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/portalview/ViewCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/portalview/ViewCourseMedia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/portalview/response/PortalViewCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/report/ReportCompany.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/report/ReportCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/search/CourseSearchParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/system/SysDictionary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/system/SysDictionaryValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/task/XcTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/task/XcTaskHis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/test/UserTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcCompany.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcCompanyUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcPermission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcTeacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/XcUserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/ext/AuthToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/ext/UserBasicInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/ext/UserToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/ext/UserTokenStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/ext/XcMenuExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/ext/XcUserExt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/request/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/response/AuthCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/response/JwtResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/response/LoginResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/ucenter/response/UcenterCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-parent/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-parent/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-govern-center/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/filesystem/FileSystemControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/filesystem/FileSystemControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseControllerApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/filesystem/FileSystemControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/filesystem/FileSystemControllerApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/controller/FileSystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/controller/FileSystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/service/FileSystemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/service/FileSystemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/controller/FileSystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/controller/FileSystemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/service/FileSystemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/service/FileSystemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/config/FastConfigTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/config/FastConfigTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CourseBaseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CourseBaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/TeachPlanMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/TeachPlanMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/META-INF/xc-service-api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CmsConfigControllerApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CmsPageControllerApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/SysDictionaryControllerApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/config/Swagger2Configuration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseControllerApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/filesystem/FileSystemControllerApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/util/FastDFSUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/util/FastDFSUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/FileSystemApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/config/FastFSConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/controller/FileSystemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/dao/FIleSystemRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/service/FileSystemService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/com/xuecheng/filesystem/util/FastDFSUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/classes/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/config/FastConfigTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/controller/FileSystemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/dao/FileSystemRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/target/test-classes/com/xuecheng/filesystem/service/FileSystemServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java/com/xuecheng/manage_cms_client/ManageCmsClientApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java/com/xuecheng/manage_cms_client/config/MongoDBConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java/com/xuecheng/manage_cms_client/config/RabbitMQConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java/com/xuecheng/manage_cms_client/mapper/CmsPageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java/com/xuecheng/manage_cms_client/mapper/CmsSiteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/mapper/CmsSiteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java/com/xuecheng/manage_cms_client/mq/ConsumerPostPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/java/com/xuecheng/manage_cms_client/service/CmsPageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms-client/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/ManageCmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/ManageCmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsPreviewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsPageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsPageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/ManageCmsApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/config/MongoDBConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsConfigController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsPageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsPreviewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/SysDictionaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/mapper/CmsConfigRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/mapper/CmsPageRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/mapper/CmsTemplateRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/mapper/SysDictionaryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsPageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/SysDictionaryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/test-classes/com/xuecheng/manage_cms/mapper/CmsPageRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/test-classes/com/xuecheng/manage_cms/service/CmsPageServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/test-classes/com/xuecheng/manage_cms/service/SysDictionaryServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CoursePicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CoursePicMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CourseBaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/dao/CourseMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/dao/CourseBaseMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/CourseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/CourseServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseBaseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/handler/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/handler/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/dao/CourseMapperTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/service/CourseServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/service/CourseServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CoursePicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CoursePicMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/META-INF/xc-service-manage-course.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/ManageCourseApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseBaseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CourseBaseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CoursePicMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/CoursePicMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/TeachPlanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/dao/TeachPlanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/handler/CourseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CommonTreeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/service/TeachplanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/com/xuecheng/manage_course/util/CategoryNodeLevelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/classes/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/META-INF/xc-service-manage-course.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/dao/CategoryMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/dao/CourseBaseMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/dao/CoursePicMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/dao/TeachPlanMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/service/CategoryServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/service/CourseServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/target/test-classes/com/xuecheng/manage_course/service/TeachplanServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-template/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-template/src/main/java/com/xuecheng/template/mapper/CmsTemplateRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-template/src/main/java/com/xuecheng/template/service/CmsTemplateService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +259,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -113,7 +268,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="E:/WorkSpace/23patarrn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xc-framework-parent" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -124,18 +279,22 @@
       <recent name="com.xuecheng.filesystem.service" />
       <recent name="com.xuecheng.manage_course" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.xuecheng.manage_cms_client.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xcedu\xc-service-manage-cms\src\main\java\com\xuecheng\manage_cms\config" />
+      <recent name="F:\xcedu\xc-govern-center\src\main\resources" />
       <recent name="F:\xcedu\xc-service-base-filesystem\src\main\resources" />
       <recent name="F:\xcedu\xc-service-base-filesystem\src\main\java\com\xuecheng\base_filesystem" />
       <recent name="F:\xcedu\xc-service-manage-course\src\main\java" />
-      <recent name="F:\xcedu\xc-service-manage-course\src\main\resources" />
-      <recent name="F:\xcedu\xc-service-manage-cms-client\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xuecheng.manage_cms.mapper" />
+      <recent name="com.xuecheng.manage_cms_client.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\xcedu\xc-govern-center\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CourseServiceTest.testSaveCoursePic">
+  <component name="RunManager" selected="Spring Boot.FileSystemApplication">
     <configuration name="CoursePicMapperTest.testSaveCoursePic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xc-service-manage-course" />
       <extension name="coverage">
@@ -163,22 +322,6 @@
       <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.dao" />
       <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.dao.CoursePicMapperTest" />
       <option name="METHOD_NAME" value="testSelectCoursePicByCourseId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CoursePicMapperTest.testUpdateCoursePic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xc-service-manage-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xuecheng.manage_course.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.dao.CoursePicMapperTest" />
-      <option name="METHOD_NAME" value="testUpdateCoursePic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,13 +359,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CmsClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="xc-service-manage-cms-client" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.manage_cms_client.ManageCmsClientApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FileSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="xc-service-base-filesystem" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.filesystem.FileSystemApplication" />
@@ -246,11 +382,9 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.CoursePicMapperTest.testSaveCoursePic" />
-      <item itemvalue="JUnit.CoursePicMapperTest.testUpdateCoursePic" />
       <item itemvalue="JUnit.CoursePicMapperTest.testSelectCoursePicByCourseId" />
       <item itemvalue="JUnit.CourseServiceTest.testSaveCoursePic" />
       <item itemvalue="JUnit.CourseServiceTest.testBoolean" />
-      <item itemvalue="Spring Boot.CmsClientApplication" />
       <item itemvalue="Spring Boot.ManageCourseApplication" />
       <item itemvalue="Spring Boot.ManageCmsApplication" />
       <item itemvalue="Spring Boot.FileSystemApplication" />
@@ -261,7 +395,6 @@
         <item itemvalue="JUnit.CoursePicMapperTest.testSaveCoursePic" />
         <item itemvalue="JUnit.CourseServiceTest.testBoolean" />
         <item itemvalue="JUnit.CoursePicMapperTest.testSelectCoursePicByCourseId" />
-        <item itemvalue="JUnit.CoursePicMapperTest.testUpdateCoursePic" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +471,11 @@
       <workItem from="1626226891137" duration="2386000" />
       <workItem from="1626230299721" duration="2928000" />
       <workItem from="1626250791176" duration="20028000" />
-      <workItem from="1626313712970" duration="1468000" />
+      <workItem from="1626313712970" duration="9739000" />
+      <workItem from="1626339523393" duration="7692000" />
+      <workItem from="1626352565941" duration="688000" />
+      <workItem from="1626353309326" duration="86000" />
+      <workItem from="1626353485600" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="改动如下：&#10;1、学成教育项目基础工程导入完毕&#10;2、新建xc-service-manage-cms模块">
       <created>1623592234235</created>
@@ -473,26 +610,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1626085048101" />
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625814338236">
+    <state x="298" y="58" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626347063980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1625814338236" />
-    <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625651059503">
+    <state x="298" y="58" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1626347063980" />
+    <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626347678034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1625651059503" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626255179823">
+    <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1626347678034" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626319219664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626255179823" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626319219664" />
     <state x="362" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1625796519234">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="362" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1625796519234" />
-    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626230859725">
+    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1626320434125">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1626230859725" />
+    <state x="472" y="271" width="591" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1626320434125" />
     <state x="472" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1625796520364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -517,42 +654,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="350" y="111" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626230976066" />
-    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1626265449124">
+    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1626353715232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626265449124" />
-    <state width="1493" height="298" key="GridCell.Tab.0.bottom" timestamp="1626271469398">
+    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626353715232" />
+    <state width="1493" height="423" key="GridCell.Tab.0.bottom" timestamp="1626347870498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
-    <state width="1493" height="298" key="GridCell.Tab.0.center" timestamp="1626271469398">
+    <state width="1493" height="423" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626347870498" />
+    <state width="1493" height="423" key="GridCell.Tab.0.center" timestamp="1626347870498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
-    <state width="1493" height="298" key="GridCell.Tab.0.left" timestamp="1626271469398">
+    <state width="1493" height="423" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626347870498" />
+    <state width="1493" height="423" key="GridCell.Tab.0.left" timestamp="1626347870497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
-    <state width="1493" height="298" key="GridCell.Tab.0.right" timestamp="1626271469398">
+    <state width="1493" height="423" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626347870497" />
+    <state width="1493" height="423" key="GridCell.Tab.0.right" timestamp="1626347870498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
-    <state width="1493" height="298" key="GridCell.Tab.1.bottom" timestamp="1626271469398">
+    <state width="1493" height="423" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626347870498" />
+    <state width="1493" height="423" key="GridCell.Tab.1.bottom" timestamp="1626347737430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
-    <state width="1493" height="298" key="GridCell.Tab.1.center" timestamp="1626271469398">
+    <state width="1493" height="423" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626347737430" />
+    <state width="1493" height="423" key="GridCell.Tab.1.center" timestamp="1626347737430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
-    <state width="1493" height="298" key="GridCell.Tab.1.left" timestamp="1626271469398">
+    <state width="1493" height="423" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626347737430" />
+    <state width="1493" height="423" key="GridCell.Tab.1.left" timestamp="1626347737430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
-    <state width="1493" height="298" key="GridCell.Tab.1.right" timestamp="1626271469398">
+    <state width="1493" height="423" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626347737430" />
+    <state width="1493" height="423" key="GridCell.Tab.1.right" timestamp="1626347737430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="298" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626271469398" />
+    <state width="1493" height="423" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626347737430" />
     <state width="1493" height="298" key="GridCell.Tab.2.bottom" timestamp="1626258694381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -569,14 +706,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="298" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1626258694381" />
-    <state x="429" y="110" key="NewModule_or_Project.wizard" timestamp="1626145162238">
+    <state x="429" y="110" key="NewModule_or_Project.wizard" timestamp="1626353717395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="429" y="110" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1626145162238" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1626266017195">
+    <state x="429" y="110" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1626353717395" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1626353725471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626266017195" />
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626353725471" />
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog" timestamp="1623753531463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -597,18 +734,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="555" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1623748232461" />
-    <state x="308" y="110" key="new project wizard" timestamp="1626145132208">
+    <state x="169" y="215" key="new project wizard" timestamp="1626353090271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="308" y="110" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1626145132208" />
+    <state x="169" y="215" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1626353090271" />
     <state x="470" y="40" key="refactoring.ChangeSignatureDialog" timestamp="1625894173361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1625894173361" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1626187487605">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1626322930333">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1626187487605" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1626322930333" />
     <state x="510" y="70" key="spring file set editor" timestamp="1623165645503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -21,7 +21,6 @@ import java.io.IOException;
 @Data
 public class FastDFSUtil<T> {
 
-
     @Autowired
     private StorageClient1 storageClient1;
 

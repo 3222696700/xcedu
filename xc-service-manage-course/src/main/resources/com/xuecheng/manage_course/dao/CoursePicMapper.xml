@@ -15,6 +15,12 @@
         VALUES
         ( #{courseid,jdbcType=VARCHAR},  #{pic,jdbcType=VARCHAR}) ;
     </insert>
+    <delete id="deleteCoursePicByCourseid">
+        DELETE
+        FROM
+        `xc_course`.`course_pic`
+        WHERE `courseid` = #{courseid,jdbcType=VARCHAR} ;
+    </delete>
 
     <select id="selectCoursePicByCourseId" resultType="com.xuecheng.framework.domain.course.CoursePic" parameterType="string">
         SELECT

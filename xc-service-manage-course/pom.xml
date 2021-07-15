@@ -6,7 +6,6 @@
         <artifactId>xc-framework-parent</artifactId>
         <groupId>com.xuecheng</groupId>
         <version>1.0-SNAPSHOT</version>
-<!--        <relativePath>../xc-framework-parent/pom.xml</relativePath>-->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,8 +13,6 @@
     <packaging>war</packaging>
 
     <name>xc-service-manage-course Maven Webapp</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

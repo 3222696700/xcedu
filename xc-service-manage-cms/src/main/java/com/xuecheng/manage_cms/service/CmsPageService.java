@@ -6,6 +6,7 @@ import com.mongodb.client.gridfs.GridFSDownloadStream;
 import com.mongodb.client.gridfs.model.GridFSFile;
 import com.xuecheng.framework.domain.cms.CmsConfig;
 import com.xuecheng.framework.domain.cms.CmsPage;
+import com.xuecheng.framework.domain.cms.CmsSite;
 import com.xuecheng.framework.domain.cms.CmsTemplate;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.domain.cms.response.CmsCode;
@@ -17,6 +18,7 @@ import com.xuecheng.framework.model.response.QueryResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.mapper.CmsConfigRepository;
 import com.xuecheng.manage_cms.mapper.CmsPageRepository;
+import com.xuecheng.manage_cms.mapper.CmsSiteRepository;
 import com.xuecheng.manage_cms.mapper.CmsTemplateRepository;
 import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;
@@ -24,8 +26,11 @@ import freemarker.template.TemplateException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -38,6 +43,8 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -60,6 +67,10 @@ import java.util.concurrent.ConcurrentHashMap;
  * */
 @Service
 public class CmsPageService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(CmsPageService.class);
+
+    @Autowired
+    CmsSiteRepository cmsSiteRepository;
 
     @Resource
     CmsPageRepository cmsPageRepository;
@@ -454,5 +465,109 @@ public class CmsPageService {
 
         rabbitTemplate.send("ex_routing_cms_postpage",cmsPage.getSiteId(),new Message(msg.getBytes(StandardCharsets.UTF_8),null));
     }
+
+
+    /**
+     * @param pageId    发布页面的pageId
+     * @Description: 根据提供的pageId将指定静态化后页面保存至页面配置指定路径下
+     * 1、根据pageId查询CmsPage,获取页面的siteId和htmlFileId
+     * 2、根据htmlFileId获取静态化页面文件
+     * 3、根据siteId获取页面保存的节点物理路径
+     * 4、根据路径=节点物理路径+页面物理路径+页面名称拼装静态页面保存路径
+     * 5、保存静态化页面至指定路径。
+     * @Author: ghost
+     * @Date:2021/6/22
+     */
+    public void savePageToServerPath(String pageId) {
+
+        CmsPage cmsPage = this.findCmsPageById(pageId);
+
+        String htmlFileId = cmsPage.getHtmlFileId();
+
+        InputStream inputStream = this.getFileById(htmlFileId);
+
+        if (inputStream == null) {
+            LOGGER.error("getFileById() return inputStream is null,getHtmlFileId:{}", htmlFileId);
+            return;
+        }
+
+        String siteId = cmsPage.getSiteId();
+
+        String sitePhysicalPath = this.findSiteBySiteId(siteId);
+
+        String pagePath = sitePhysicalPath + cmsPage.getPagePhysicalPath() + cmsPage.getPageName();
+
+        FileOutputStream fileOutputStream = null;
+
+        try {
+            fileOutputStream = new FileOutputStream(new File(pagePath));
+            IOUtils.copy(inputStream, fileOutputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fileOutputStream != null) {
+                    fileOutputStream.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+    /**
+     * @param pageId    发布页面的pageId
+     * @Description: 根据pageId查询CmsPage,获取页面的siteId和htmlFileId
+     * @Author: ghost
+     * @Date:2021/6/22
+     */
+    public CmsPage findCmsPageById(String pageId) {
+
+        Optional<CmsPage> optional = cmsPageRepository.findById(pageId);
+        return optional.orElse(null);
+    }
+
+    /**
+     * @param templateFileId    发布页面静态页面存放的templateFileId
+     * @Description: 根据htmlFileId获取静态化页面文件
+     * @Author: ghost
+     * @Date:2021/6/22
+     */
+    private InputStream getFileById(String templateFileId) {
+
+        GridFSFile gridFSFile = gridFsTemplate.findOne(Query.query(Criteria.where("_id").is(templateFileId)));
+
+        assert gridFSFile != null;
+
+        GridFSDownloadStream gridFSDownloadStream = gridFSBucket.openDownloadStream(gridFSFile.getObjectId());
+
+        GridFsResource gridFsResource = new GridFsResource(gridFSFile, gridFSDownloadStream);
+
+        try {
+            return gridFsResource.getInputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    /**
+     * @param siteId    发布页面所属站点Id
+     * @Description: 根据siteId获取页面保存的节点物理路径。
+     * @Author: ghost
+     * @Date:2021/6/22
+     */
+    private String findSiteBySiteId(String siteId) {
+        Optional<CmsSite> optional = cmsSiteRepository.findById(siteId);
+        return optional.map(CmsSite::getSitePhysicalPath).orElse(null);
+    }
+
 
 }

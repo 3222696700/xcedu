@@ -53,9 +53,19 @@ public class CourseController implements CourseControllerApi {
 
 
 
+    @GetMapping("/coursepic/get/{courseid}")
+    @Override
+    public CoursePic queryCoursePicByCourseid(@PathVariable("courseid") String courseid) {
+        return courseService.queryCoursePicByCourseid(courseid);
+    }
 
+    @DeleteMapping("/coursepic/")
+    @Override
+    public ResponseResult deleteCoursePicByCourseid(String courseid) {
+        return null;
+    }
 
-//===================================================================TeachPlan Manage=========================================================
+    //===================================================================TeachPlan Manage=========================================================
     @Override
     @GetMapping("/teachplan/list/{courseid}")
     public TeachplanNode queryTeachPlanByCourseId(@PathVariable("courseid") String courseId)  {

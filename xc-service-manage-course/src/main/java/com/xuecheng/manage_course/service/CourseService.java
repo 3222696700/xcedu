@@ -51,4 +51,30 @@ public class CourseService {
         }
         return coursePic.getPic().equals(updateCoursePic.getPic())&coursePic.getCourseid().equals(updateCoursePic.getCourseid());
     }
+
+
+    public CoursePic queryCoursePicByCourseid(String courseid){
+        if(StringUtils.isEmpty(courseid)||(courseBaseMapper.findCourseBaseById(courseid))==null){
+            return null;
+        }
+        CoursePic coursePic=coursePicMapper.selectCoursePicByCourseId(courseid);
+
+        if(coursePic==null
+                ||StringUtils.isEmpty(coursePic.getCourseid())
+                ||StringUtils.isEmpty(coursePic.getPic())){
+                return null;
+        }
+        return coursePic;
+
+    }
+
+
+    public ResponseResult deleteCoursePicByCourseid(String courseid){
+        if(StringUtils.isEmpty(courseid)||(courseBaseMapper.findCourseBaseById(courseid))==null){
+            return new ResponseResult(CommonCode.FAIL);
+        }
+        coursePicMapper.deleteCoursePicByCourseid(courseid);
+        return coursePicMapper.selectCoursePicByCourseId(courseid)==null?new ResponseResult(CommonCode.SUCCESS):new ResponseResult(CommonCode.FAIL);
+
+    }
 }
