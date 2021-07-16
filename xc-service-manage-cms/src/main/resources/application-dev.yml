@@ -32,8 +32,10 @@ eureka:
   instance:
     instance-id: ${spring.application.name}
     prefer-ip-address: true
+    home-page-url-path: /
+
 info:
-  app-name: ${spring.application.name}
-  company-name: ${project.groupId}
-  build-artifactId: ${project.artifactId}
-  build-version: ${project.version$}
+    app.name: xc-service-manage-cms
+    company.name: xuecheng education
+    build.artifactId: com.xuecheng
+    build.version: 1.0-SNAPSHOT

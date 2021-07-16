@@ -55,6 +55,6 @@ public class CmsPage {
     //静态文件Id
     private String htmlFileId;
     //数据Url
-    private String dataUrl;
+    private String configid;
 
 }

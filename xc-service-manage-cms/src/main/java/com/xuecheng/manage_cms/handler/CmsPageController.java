@@ -40,7 +40,7 @@ public class CmsPageController extends BaseController implements CmsPageControll
     @Override
     public CmsPage findById(@PathVariable("id") String Id) {
 
-        return cmsPageService.findById(Id);
+        return cmsPageService.findCmsPageById(Id);
     }
     @PostMapping(value = "/add")
     @Override
@@ -62,14 +62,6 @@ public class CmsPageController extends BaseController implements CmsPageControll
         return cmsPageService.update(id,cmsPage);
     }
 
-
-    @PostMapping("/postPage/{pageId}")
-    @Override
-    public ResponseResult postPage(@PathVariable("pageId") String pageId) {
-        return cmsPageService.postPage(pageId);
-    }
-
-
     @RequestMapping(value={"/preview/{id}"},method = {RequestMethod.GET})
     public void preview(@PathVariable("id") String id) throws IOException {
         String previewPage=cmsPageService.getPageHtml(id);
@@ -79,5 +71,14 @@ public class CmsPageController extends BaseController implements CmsPageControll
             servletOutputStream.write(previewPage.getBytes(StandardCharsets.UTF_8));
         }
     }
+
+    @PostMapping("/postPage/{pageId}")
+    @Override
+    public ResponseResult postPage(@PathVariable("pageId") String pageId) {
+        return cmsPageService.postCmsPage(pageId);
+    }
+
+
+
 
 }

@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
+        <version>2.2.2.RELEASE</version>
     </parent>
     <groupId>com.xuecheng</groupId>
     <artifactId>xc-framework-parent</artifactId>
@@ -158,14 +158,16 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
-           <!-- &lt;!&ndash; 资源文件拷贝插件 &ndash;&gt;
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <encoding>UTF-8</encoding>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
                 </configuration>
-            </plugin>-->
+            </plugin>
             <!-- java编译插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -176,10 +178,12 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
         </plugins>
     </build>
 
