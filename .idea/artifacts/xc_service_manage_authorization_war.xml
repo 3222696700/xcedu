@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xc-service-manage-authorization:war">
+    <output-path>$PROJECT_DIR$/xc-service-manage-authorization/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xc-service-manage-authorization</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xc-service-manage-authorization.war">
+      <element id="artifact" artifact-name="xc-service-manage-authorization:war exploded" />
+    </root>
+  </artifact>
+</component>

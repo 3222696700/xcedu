@@ -9,8 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/xc-service-api/xc-service-api.iml" filepath="$PROJECT_DIR$/xc-service-api/xc-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-base-filesystem/xc-service-base-filesystem.iml" filepath="$PROJECT_DIR$/xc-service-base-filesystem/xc-service-base-filesystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-eureka-server/xc-service-eureka-server.iml" filepath="$PROJECT_DIR$/xc-service-eureka-server/xc-service-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-service-manage-authorization/xc-service-manage-authorization.iml" filepath="$PROJECT_DIR$/xc-service-manage-authorization/xc-service-manage-authorization.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" filepath="$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-course/xc-service-manage-course.iml" filepath="$PROJECT_DIR$/xc-service-manage-course/xc-service-manage-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-service-manage-payment/xc-service-manage-payment.iml" filepath="$PROJECT_DIR$/xc-service-manage-payment/xc-service-manage-payment.iml" />
     </modules>
   </component>
 </project>

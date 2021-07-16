@@ -4,9 +4,11 @@
     <file type="web" url="file://$PROJECT_DIR$/xc-govern-center" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-base-filesystem" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-eureka-server" />
+    <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-authorization" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms-client" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-course" />
+    <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-payment" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
