@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "actuator.info.app-name",
+      "type": "java.lang.String",
+      "description": "Description for actuator.info.app-name."
+    },
+    {
+      "name": "actuator.info.company-name",
+      "type": "java.lang.String",
+      "description": "Description for actuator.info.company-name."
+    }
+  ] }

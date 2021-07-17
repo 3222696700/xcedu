@@ -4,7 +4,6 @@ import com.mongodb.client.gridfs.GridFSBucket;
 import com.mongodb.client.gridfs.GridFSDownloadStream;
 import com.mongodb.client.gridfs.model.GridFSFile;
 import com.xuecheng.framework.domain.cms.CmsTemplate;
-import com.xuecheng.framework.domain.cms.ext.CmsTemplateExt;
 import com.xuecheng.framework.domain.cms.request.CmsTemplateRequest;
 import com.xuecheng.framework.domain.cms.response.CmsCode;
 import com.xuecheng.framework.exception.ExceptionCast;
@@ -25,7 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.annotation.Resource;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Optional;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @Auther:ghost
@@ -45,11 +44,27 @@ public class CmsTemplateService {
     GridFSBucket gridFSBucket;
 
     public ResponseResult saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest) {
-        String fileid = saveTemplatePage(multipartFile);
+        if(multipartFile==null&cmsTemplateRequest==null){
+            return new ResponseResult(CommonCode.SUCCESS);
+        }
+        if(multipartFile==null){
+            CmsTemplate cmsTemplate = new CmsTemplate();
+            BeanUtils.copyProperties(cmsTemplateRequest, cmsTemplate);
+            cmsTemplateRepository.save(cmsTemplate);
+            return new ResponseResult(CommonCode.SUCCESS);
+        }
+        if(cmsTemplateRequest==null){
+            String fileid=saveTemplatePage(multipartFile);
+            CmsTemplate cmsTemplate = new CmsTemplate();
+            cmsTemplate.setTemplateFileId(fileid);
+            return new ResponseResult(CommonCode.SUCCESS);
+        }
+        String fileid=saveTemplatePage(multipartFile);
+
         if (StringUtils.isEmpty(fileid)) {
             return new ResponseResult(CommonCode.FAIL);
         }
-
+        cmsTemplateRequest.setTemplateFileId(fileid);
         CmsTemplate cmsTemplate = new CmsTemplate();
         BeanUtils.copyProperties(cmsTemplateRequest, cmsTemplate);
         cmsTemplateRepository.save(cmsTemplate);
@@ -80,23 +95,6 @@ public class CmsTemplateService {
     }
 
     /**
-     * 根据templateId提取文件信息
-     */
-    public CmsTemplateExt queryTemplateFileById(String templatId) {
-        Optional<CmsTemplate> optional = cmsTemplateRepository.findById(templatId);
-        if (!optional.isPresent()) {
-            return null;
-        }
-        CmsTemplate cmsTemplate = optional.get();
-        String fileId = cmsTemplate.getTemplateFileId();
-        String content=getTemplateFileByTemplateFileId(fileId);
-        CmsTemplateExt cmsTemplateExt=new CmsTemplateExt();
-        BeanUtils.copyProperties(cmsTemplate,cmsTemplateExt);
-        cmsTemplateExt.setTemplateValue(content);
-        return cmsTemplateExt;
-    }
-
-    /**
      * @param templateFileId 发布页面静态页面存放的templateFileId
      * @Description: 根据htmlFileId获取静态化页面文件
      * @Author: ghost
@@ -111,16 +109,31 @@ public class CmsTemplateService {
         }
         GridFSDownloadStream gridFSDownloadStream = gridFSBucket.openDownloadStream(gridFSFile.getObjectId());
         GridFsResource gridFsResource = new GridFsResource(gridFSFile, gridFSDownloadStream);
-        String content=null;
+        String content;
         try {
-            content = IOUtils.toString(gridFsResource.getInputStream(), "utf-8");
+            content = IOUtils.toString(gridFsResource.getInputStream(), StandardCharsets.UTF_8);
         } catch (IOException e) {
             e.printStackTrace();
             return null;
-        }finally{
+        } finally {
             gridFSDownloadStream.close();
         }
         return content;
 
+    }
+
+    public ResponseResult deletTemplateBase(String templateId) {
+        if (StringUtils.isEmpty(templateId)) {
+            return new ResponseResult(CommonCode.FAIL);
+        }
+        CmsTemplate cmsTemplate=cmsTemplateRepository.findById(templateId).orElse(null);
+        if(cmsTemplate==null||StringUtils.isEmpty(cmsTemplate.getTemplateFileId())){
+            return new ResponseResult(CommonCode.FAIL);
+        }
+        gridFSBucket.delete(new ObjectId(cmsTemplate.getTemplateFileId()));
+
+        cmsTemplateRepository.deleteById(templateId);
+
+        return new ResponseResult(CommonCode.SUCCESS);
     }
 }

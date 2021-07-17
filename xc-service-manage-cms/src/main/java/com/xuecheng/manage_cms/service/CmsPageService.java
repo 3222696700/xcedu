@@ -308,12 +308,13 @@ public class CmsPageService {
 
 //    ======================================页面发布===================================
 
+
+
     public ResponseResult postCmsPage(String pageId){
         if(StringUtils.isEmpty(pageId)){
             return new ResponseResult(CommonCode.FAIL);
         }
-        savePageToServerPath(pageId);
-        return new ResponseResult(CommonCode.SUCCESS);
+        return savePageToServerPath(pageId)?new ResponseResult(CommonCode.SUCCESS):new ResponseResult(CommonCode.FAIL);
     }
     /**
      * @param pageId 发布页面的pageId
@@ -342,6 +343,7 @@ public class CmsPageService {
         String htmlFileId = cmsPage.getHtmlFileId();
         String siteId = cmsPage.getSiteId();
         String sitePhysicalPath = this.findSiteBySiteId(siteId);
+
         if(StringUtils.isEmpty(sitePhysicalPath)){
             return false;
         }
@@ -349,11 +351,9 @@ public class CmsPageService {
 
         String content=cmsTemplateService.getTemplateFileByTemplateFileId(htmlFileId);
         Map data=getModelByPageId(pageId);
-
         if(StringUtils.isEmpty(content)||CollectionUtils.isEmpty(data)){
             return false;
         }
-
         String html=gennerateHtml(content,data);
 
         if(StringUtils.isEmpty(html)){

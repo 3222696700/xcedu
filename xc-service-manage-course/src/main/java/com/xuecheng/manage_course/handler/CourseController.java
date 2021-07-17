@@ -3,16 +3,18 @@ package com.xuecheng.manage_course.handler;
 import com.xuecheng.api.course.CourseControllerApi;
 import com.xuecheng.framework.domain.course.CoursePic;
 import com.xuecheng.framework.domain.course.ext.CategoryNode;
+import com.xuecheng.framework.domain.course.ext.CourseView;
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
 import com.xuecheng.framework.domain.course.request.CourseListRequest;
+import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_course.service.CategoryService;
 import com.xuecheng.manage_course.service.CourseService;
 import com.xuecheng.manage_course.service.TeachplanService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -26,25 +28,39 @@ import java.util.List;
 public class CourseController implements CourseControllerApi {
 
 
-    @Autowired
+    @Resource
     TeachplanService teachplanService;
 
-    @Autowired
+    @Resource
     CategoryService categoryService;
 
-    @Autowired
+    @Resource
     CourseService courseService;
 
 
 
 //  ==============================================================CourseBase Manage===========================================================
+
+   //todo:多条件选择查询
     @GetMapping("/list/{page}/{size}")
     @Override
     public QueryResponseResult findAllCourse(@PathVariable("page") Integer page, @PathVariable("size") Integer size, @RequestBody CourseListRequest courseListRequest) {
 
-
-        return null;
+        return new QueryResponseResult(CommonCode.SUCCESS,null);
     }
+
+
+
+
+
+    @Override
+    public CourseView getCourseViewByCourseid(String courseid) {
+        return courseService.getCourseViewByCourseid(courseid);
+    }
+
+
+
+    //==================================================================CoursePic Manage==========================================================
     @PostMapping("/coursepic/save")
     @Override
     public ResponseResult saveCoursePic(CoursePic coursePic) {
@@ -59,11 +75,13 @@ public class CourseController implements CourseControllerApi {
         return courseService.queryCoursePicByCourseid(courseid);
     }
 
-    @DeleteMapping("/coursepic/")
+    @DeleteMapping("/coursepic/{courseid}")
     @Override
-    public ResponseResult deleteCoursePicByCourseid(String courseid) {
-        return null;
+    public ResponseResult deleteCoursePicByCourseid(@PathVariable("courseid") String courseid) {
+        return courseService.deleteCoursePicByCourseid(courseid);
     }
+
+
 
     //===================================================================TeachPlan Manage=========================================================
     @Override

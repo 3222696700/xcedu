@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810817f0-4767-4177-86e4-c8052edc4ef9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-authorization/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-authorization/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-authorization/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-payment/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-payment/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-manage-payment/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/ext/CourseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/dao/CourseMarketMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/dao/CourseMarketMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/cms/request/CmsTemplateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/cms/request/CmsTemplateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/CourseMarket.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/course/CourseMarket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/CmsTemplate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CourseMarket.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/course/CourseMarket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xc-framework-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/cms/CmsTemplateControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/cms/CmsTemplateControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/course/CourseControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseControllerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/ManageCmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/ManageCmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsTemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsPageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsPageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsTemplateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/handler/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/CourseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/test/java/com/xuecheng/manage_course/service/CourseServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +49,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -88,33 +102,49 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xc-service-manage-cms" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.31408775" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\xcedu\xc-govern-center\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.xuecheng.filesystem.service" />
       <recent name="com.xuecheng.manage_course" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\xcedu\xc-service-manage-course\src" />
-      <recent name="F:\xcedu\xc-service-manage-cms\src" />
-      <recent name="F:\xcedu\xc-service-base-filesystem\src\test\java" />
-      <recent name="F:\xcedu\xc-service-base-filesystem\src\main\resources" />
-      <recent name="F:\xcedu\xc-service-base-filesystem\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xuecheng.manage_cms.mapper" />
       <recent name="com.xuecheng.manage_cms_client.config" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\xcedu\xc-govern-center\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xcedu\xc-framework-model\src\main\java\com\xuecheng\framework\domain\course\ext" />
+      <recent name="F:\xcedu\xc-service-manage-course\src" />
+      <recent name="F:\xcedu\xc-service-manage-cms\src" />
+      <recent name="F:\xcedu\xc-service-base-filesystem\src\test\java" />
+      <recent name="F:\xcedu\xc-service-base-filesystem\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ManageCmsApplication">
+    <configuration name="CourseServiceTest.getCourseViewByCourseid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xc-service-manage-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xuecheng.manage_course.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.service" />
+      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.service.CourseServiceTest" />
+      <option name="METHOD_NAME" value="getCourseViewByCourseid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FileSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="xc-service-base-filesystem" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.filesystem.FileSystemApplication" />
@@ -125,6 +155,8 @@
     <configuration name="ManageCmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="xc-service-manage-cms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.manage_cms.ManageCmsApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="D:\Program Files\Java\jdk1.8.0_151\jre" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,6 +175,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.CourseServiceTest.getCourseViewByCourseid" />
+      <item itemvalue="Spring Boot.FileSystemApplication" />
+      <item itemvalue="Spring Boot.ManageCmsApplication" />
+      <item itemvalue="Spring Boot.ManageCourseApplication" />
+      <item itemvalue="Spring Boot.XCEurekaServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CourseServiceTest.getCourseViewByCourseid" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -228,7 +272,8 @@
       <workItem from="1626358449137" duration="4898000" />
       <workItem from="1626395484804" duration="11140000" />
       <workItem from="1626426269064" duration="4267000" />
-      <workItem from="1626430906958" duration="827000" />
+      <workItem from="1626430906958" duration="4759000" />
+      <workItem from="1626487332704" duration="7138000" />
     </task>
     <task id="LOCAL-00001" summary="改动如下：&#10;1、学成教育项目基础工程导入完毕&#10;2、新建xc-service-manage-cms模块">
       <created>1623592234235</created>
@@ -356,26 +401,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="改动如下：&#10;1、完成FastDFS环境搭建，完成FastDFSConfig封装且测试通过。" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Assign_Data_Sources" timestamp="1625711819898">
+    <state x="361" y="71" key="#Assign_Data_Sources" timestamp="1626490617300">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1625711819898" />
+    <state x="361" y="71" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1626490617300" />
     <state x="361" y="71" key="#SQL_Dialects" timestamp="1626085048101">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1626085048101" />
-    <state x="298" y="58" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626356954698">
+    <state x="298" y="58" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626495582624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="298" y="58" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1626356954698" />
+    <state x="298" y="58" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1626495582624" />
     <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626347678034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="481" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1626347678034" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626403404880">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1626494433642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626403404880" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626494433642" />
     <state x="362" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1625796519234">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -408,42 +453,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="350" y="111" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1626230976066" />
-    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1626358472409">
+    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1626495880853">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626358472409" />
-    <state width="1493" height="172" key="GridCell.Tab.0.bottom" timestamp="1626431132294">
+    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626495880853" />
+    <state width="1493" height="329" key="GridCell.Tab.0.bottom" timestamp="1626496397655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626431132294" />
-    <state width="1493" height="172" key="GridCell.Tab.0.center" timestamp="1626431132294">
+    <state width="1493" height="329" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626496397655" />
+    <state width="1493" height="329" key="GridCell.Tab.0.center" timestamp="1626496397654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626431132294" />
-    <state width="1493" height="172" key="GridCell.Tab.0.left" timestamp="1626431132294">
+    <state width="1493" height="329" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626496397654" />
+    <state width="1493" height="329" key="GridCell.Tab.0.left" timestamp="1626496397654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626431132294" />
-    <state width="1493" height="172" key="GridCell.Tab.0.right" timestamp="1626431132294">
+    <state width="1493" height="329" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626496397654" />
+    <state width="1493" height="329" key="GridCell.Tab.0.right" timestamp="1626496397655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626431132294" />
-    <state width="1493" height="423" key="GridCell.Tab.1.bottom" timestamp="1626363397407">
+    <state width="1493" height="329" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626496397655" />
+    <state width="1493" height="329" key="GridCell.Tab.1.bottom" timestamp="1626496397655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="423" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626363397407" />
-    <state width="1493" height="423" key="GridCell.Tab.1.center" timestamp="1626363397407">
+    <state width="1493" height="329" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626496397655" />
+    <state width="1493" height="329" key="GridCell.Tab.1.center" timestamp="1626496397655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="423" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626363397407" />
-    <state width="1493" height="423" key="GridCell.Tab.1.left" timestamp="1626363397407">
+    <state width="1493" height="329" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1626496397655" />
+    <state width="1493" height="329" key="GridCell.Tab.1.left" timestamp="1626496397655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="423" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626363397407" />
-    <state width="1493" height="423" key="GridCell.Tab.1.right" timestamp="1626363397407">
+    <state width="1493" height="329" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1626496397655" />
+    <state width="1493" height="329" key="GridCell.Tab.1.right" timestamp="1626496397655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="423" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626363397407" />
+    <state width="1493" height="329" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1626496397655" />
     <state width="1493" height="298" key="GridCell.Tab.2.bottom" timestamp="1626258694381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -460,14 +505,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="298" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1626258694381" />
-    <state x="429" y="110" key="NewModule_or_Project.wizard" timestamp="1626357287123">
+    <state x="429" y="110" key="NewModule_or_Project.wizard" timestamp="1626495882933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="429" y="110" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1626357287123" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1626431070478">
+    <state x="429" y="110" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1626495882933" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1626495888369">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626431070478" />
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626495888369" />
     <state x="93" y="93" width="1350" height="638" key="ShowDiffWithBranchDialog" timestamp="1623753531463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -496,10 +541,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1625894173361" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1626322930333">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1626494746097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1626322930333" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1626494746097" />
     <state x="510" y="70" key="spring file set editor" timestamp="1623165645503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

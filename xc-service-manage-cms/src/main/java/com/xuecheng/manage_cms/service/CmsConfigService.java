@@ -2,8 +2,9 @@ package com.xuecheng.manage_cms.service;
 
 import com.xuecheng.framework.domain.cms.CmsConfig;
 import com.xuecheng.manage_cms.mapper.CmsConfigRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @Auther:ghost
@@ -14,10 +15,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class CmsConfigService {
 
-    @Autowired
+    @Resource
     CmsConfigRepository cmsConfigRepository;
-
-
 
     public CmsConfig getCmsConfigById(String id){
        return cmsConfigRepository.findById(id).orElse(null);

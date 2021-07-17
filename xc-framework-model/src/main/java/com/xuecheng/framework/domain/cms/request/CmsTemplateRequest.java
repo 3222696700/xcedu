@@ -12,7 +12,6 @@ import org.springframework.data.annotation.Id;
 @Data
 public class CmsTemplateRequest{
     //站点ID
-    //站点ID
     private String siteId;
 
     //模版ID

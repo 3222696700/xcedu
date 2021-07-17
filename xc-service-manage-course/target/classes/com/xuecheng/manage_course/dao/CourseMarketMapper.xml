@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuecheng.manage_course.dao.CourseMarketMapper">
+    <resultMap id="BaseResultMap" type="com.xuecheng.framework.domain.course.CourseMarket" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="charge" property="charge" jdbcType="VARCHAR" />
+        <result column="valid" property="valid" jdbcType="VARCHAR" />
+        <result column="expires" property="expires" jdbcType="VARCHAR" />
+        <result column="qq" property="qq" jdbcType="VARCHAR" />
+        <result column="price" property="price" jdbcType="VARCHAR" />
+        <result column="price_old" property="price_old" jdbcType="VARCHAR" />
+        <result column="start_time" property="startTime" jdbcType="VARCHAR" />
+        <result column="end_time" property="endTime" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+       `id`,`charge`,`valid`,`expires`,`qq`,`price`,`price_old`,`start_time`,`end_time`
+   </sql>
+
+    <select id="selectCourseMarketByCourseId" resultType="com.xuecheng.framework.domain.course.CourseMarket" parameterType="string">
+        SELECT
+            <include refid="Base_Column_List"></include>
+        FROM
+            `xc_course`.`course_market`
+        WHERE `id`=#{courseid,jdbcType=VARCHAR};
+    </select>
+</mapper>

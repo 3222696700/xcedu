@@ -1,0 +1,41 @@
+server:
+  port: 31001
+spring:
+  application:
+    name: xc-service-manage-cms
+
+  #    MongoDB配置
+  data:
+    mongodb:
+      uri:  mongodb://localhost:27017/xc_cms
+      database: xc_cms
+
+  #      FreeMarker配置
+  freemarker:
+    cache: false
+    settings:
+      template_update_delay: 0
+
+  #        RibbitMQ配置
+  rabbitmq:
+    host: 127.0.0.1
+    username: admin
+    password: admin
+    virtual-host: /
+    port: 5672
+
+#       Eureka Client Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:50101/eureka
+  instance:
+    instance-id: ${spring.application.name}
+    prefer-ip-address: true
+    home-page-url-path: /
+
+info:
+    app.name: xc-service-manage-cms
+    company.name: xuecheng education
+    build.artifactId: com.xuecheng
+    build.version: 1.0-SNAPSHOT
