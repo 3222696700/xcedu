@@ -51,10 +51,9 @@ public class CourseController implements CourseControllerApi {
 
 
 
-
-
+    @GetMapping("/courseview/{courseid}")
     @Override
-    public CourseView getCourseViewByCourseid(String courseid) {
+    public CourseView getCourseViewByCourseid(@PathVariable("courseid") String courseid) {
         return courseService.getCourseViewByCourseid(courseid);
     }
 

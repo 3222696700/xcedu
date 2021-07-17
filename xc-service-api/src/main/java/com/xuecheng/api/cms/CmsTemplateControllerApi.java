@@ -16,17 +16,11 @@ import org.springframework.web.multipart.MultipartFile;
 public interface CmsTemplateControllerApi {
 
         @ApiOperation("保存模板文件和模板信息")
-        ResponseResult saveTemplate(MultipartFile multipartFile,CmsTemplateRequest cmsTemplateRequest);
+        ResponseResult saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest);
 
         @ApiOperation("删除模板文件和模板信息")
         ResponseResult deletTemplate(String templateId);
 
-        // todo:页面管理的查询和配置暂不开发，前端还没开发出来。
-//        @ApiOperation("根据templateId查询模板信息")
-//        CmsTemplate queryTemplateByTemplateId(String templateId);
-//
-//        @ApiOperation("分页查询模板基本信息")
-//        QueryResponseResult<CmsTemplate> queryTemplateBaseList(Integer page,Integer size,CmsTemplateRequest cmsTemplateRequest);
 
 
 

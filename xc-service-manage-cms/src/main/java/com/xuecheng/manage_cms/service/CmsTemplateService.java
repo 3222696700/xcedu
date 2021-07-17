@@ -44,19 +44,10 @@ public class CmsTemplateService {
     GridFSBucket gridFSBucket;
 
     public ResponseResult saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest) {
-        if(multipartFile==null&cmsTemplateRequest==null){
-            return new ResponseResult(CommonCode.SUCCESS);
-        }
-        if(multipartFile==null){
-            CmsTemplate cmsTemplate = new CmsTemplate();
-            BeanUtils.copyProperties(cmsTemplateRequest, cmsTemplate);
-            cmsTemplateRepository.save(cmsTemplate);
-            return new ResponseResult(CommonCode.SUCCESS);
-        }
-        if(cmsTemplateRequest==null){
-            String fileid=saveTemplatePage(multipartFile);
-            CmsTemplate cmsTemplate = new CmsTemplate();
-            cmsTemplate.setTemplateFileId(fileid);
+        if(multipartFile==null
+                ||cmsTemplateRequest==null
+                ||StringUtils.isEmpty(cmsTemplateRequest.getTemplateName())
+                || StringUtils.isEmpty(cmsTemplateRequest.getSiteId())){
             return new ResponseResult(CommonCode.SUCCESS);
         }
         String fileid=saveTemplatePage(multipartFile);
@@ -64,9 +55,9 @@ public class CmsTemplateService {
         if (StringUtils.isEmpty(fileid)) {
             return new ResponseResult(CommonCode.FAIL);
         }
-        cmsTemplateRequest.setTemplateFileId(fileid);
         CmsTemplate cmsTemplate = new CmsTemplate();
-        BeanUtils.copyProperties(cmsTemplateRequest, cmsTemplate);
+        cmsTemplateRequest.setTemplateFileId(fileid);
+        BeanUtils.copyProperties(cmsTemplateRequest,cmsTemplate);
         cmsTemplateRepository.save(cmsTemplate);
         return new ResponseResult(CommonCode.SUCCESS);
     }
@@ -82,6 +73,7 @@ public class CmsTemplateService {
             return objectId.toHexString();
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
         } finally {
             if (inputStream != null) {
                 try {
@@ -91,7 +83,6 @@ public class CmsTemplateService {
                 }
             }
         }
-        return null;
     }
 
     /**
