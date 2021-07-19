@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-authorization/xc-service-manage-authorization.iml" filepath="$PROJECT_DIR$/xc-service-manage-authorization/xc-service-manage-authorization.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" filepath="$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-course/xc-service-manage-course.iml" filepath="$PROJECT_DIR$/xc-service-manage-course/xc-service-manage-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-service-manage-medium/xc-service-manage-medium.iml" filepath="$PROJECT_DIR$/xc-service-manage-medium/xc-service-manage-medium.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-payment/xc-service-manage-payment.iml" filepath="$PROJECT_DIR$/xc-service-manage-payment/xc-service-manage-payment.iml" />
     </modules>
   </component>

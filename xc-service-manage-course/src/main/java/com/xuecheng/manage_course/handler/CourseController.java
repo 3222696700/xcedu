@@ -40,7 +40,6 @@ public class CourseController implements CourseControllerApi {
 
 
 //  ==============================================================CourseBase Manage===========================================================
-
    //todo:多条件选择查询
     @GetMapping("/list/{page}/{size}")
     @Override

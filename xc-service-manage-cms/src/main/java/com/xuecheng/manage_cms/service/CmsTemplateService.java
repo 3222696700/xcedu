@@ -48,7 +48,7 @@ public class CmsTemplateService {
                 ||cmsTemplateRequest==null
                 ||StringUtils.isEmpty(cmsTemplateRequest.getTemplateName())
                 || StringUtils.isEmpty(cmsTemplateRequest.getSiteId())){
-            return new ResponseResult(CommonCode.SUCCESS);
+            return new ResponseResult(CommonCode.FAIL);
         }
         String fileid=saveTemplatePage(multipartFile);
 

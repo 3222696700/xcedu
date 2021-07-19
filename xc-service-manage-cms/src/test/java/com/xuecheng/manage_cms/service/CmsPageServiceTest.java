@@ -2,7 +2,7 @@ package com.xuecheng.manage_cms.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.xuecheng.framework.domain.course.ext.CourseView;
+import com.xuecheng.framework.domain.cms.CmsConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,14 +38,20 @@ public class CmsPageServiceTest {
     @Autowired
     GridFsTemplate gridFsTemplate;
 
+
+    @Autowired
+    CmsConfigService cmsConfigService;
+
     @Test
     public void testGetPageHtml() throws FileNotFoundException {
-        testGridFS();
-        String template= cmsTemplateService.getTemplateFileByTemplateFileId("60f2eca30272ab11b02b6bc2");
 
-        CourseView courseView=restTemplate.getForObject("http://127.0.0.1:31200/course/courseview/4028e581617f945f01617f9dabc40000",CourseView.class);
+        String template= cmsTemplateService.getTemplateFileByTemplateFileId(testGridFS());
 
-        Map map=JSONObject.parseObject(JSON.toJSONString(courseView));
+//        CourseView courseView=restTemplate.getForObject("http://127.0.0.1:31200/course/courseview/4028e581617f945f01617f9dabc40000",CourseView.class);
+
+        CmsConfig cmsConfig=cmsConfigService.getCmsConfigById("60e3c144ff2b400f7b02c82b");
+
+        Map map=JSONObject.parseObject(JSON.toJSONString(cmsConfig));
 
         String html=cmsPageService.gennerateHtml(template,map);
 
@@ -54,8 +60,9 @@ public class CmsPageServiceTest {
     }
 
     public String testGridFS() throws FileNotFoundException {
-        FileInputStream fileInputStream=new FileInputStream(new File("E:\\course.ftl"));
-       return gridFsTemplate.store(fileInputStream, "course").toHexString();
+
+        FileInputStream fileInputStream=new FileInputStream(new File("E:\\banner.ftl"));
+        return gridFsTemplate.store(fileInputStream, "index_banner").toHexString();
 
     }
 

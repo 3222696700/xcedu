@@ -10,6 +10,7 @@
         <module>../xc-service-manage-course</module>
         <module>../xc-service-manage-payment</module>
         <module>../xc-service-manage-authorization</module>
+        <module>../xc-service-manage-medium</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

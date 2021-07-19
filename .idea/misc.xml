@@ -8,6 +8,7 @@
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms-client" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-course" />
+    <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-medium" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-payment" />
   </component>
   <component name="JavaScriptSettings">

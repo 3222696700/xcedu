@@ -7,15 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xc-service-manage-course" />
         <module name="xc-framework-common" />
-        <module name="xc-service-eureka-server" />
+        <module name="xc-service-manage-authorization" />
         <module name="xc-framework-model" />
         <module name="xc-framework-utils" />
-        <module name="xc-service-manage-authorization" />
+        <module name="xc-service-manage-medium" />
+        <module name="xc-service-eureka-server" />
         <module name="xc-service-manage-payment" />
-        <module name="xc-service-base-filesystem" />
         <module name="xc-service-api" />
+        <module name="xc-service-base-filesystem" />
+        <module name="xc-service-manage-course" />
         <module name="xc-service-manage-cms" />
       </profile>
     </annotationProcessing>
@@ -32,6 +33,7 @@
       <module name="xc-service-manage-cms" target="1.8" />
       <module name="xc-service-manage-cms-client" target="1.8" />
       <module name="xc-service-manage-course" target="1.8" />
+      <module name="xc-service-manage-medium" target="1.8" />
       <module name="xc-service-manage-payment" target="1.8" />
       <module name="xc-service-manage-template" target="1.8" />
     </bytecodeTargetLevel>

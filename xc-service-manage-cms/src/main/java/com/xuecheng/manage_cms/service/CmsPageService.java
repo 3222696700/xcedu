@@ -295,7 +295,7 @@ public class CmsPageService {
         configuration.setTemplateLoader(stringTemplateLoader);
         try {
             String page = FreeMarkerTemplateUtils.processTemplateIntoString(configuration.getTemplate("template"), data);
-            if (StringUtils.isEmpty(page)) {
+            if (!StringUtils.isEmpty(page)) {
                 return page;
             } else {
                 return null;
@@ -332,6 +332,7 @@ public class CmsPageService {
             return false;
         }
         CmsPage cmsPage = this.findCmsPageById(pageId);
+
         if(cmsPage==null
                 ||StringUtils.isEmpty(cmsPage.getHtmlFileId())
                 ||StringUtils.isEmpty(cmsPage.getSiteId())
@@ -347,10 +348,12 @@ public class CmsPageService {
         if(StringUtils.isEmpty(sitePhysicalPath)){
             return false;
         }
-        String pagePath = sitePhysicalPath + cmsPage.getPagePhysicalPath() + cmsPage.getPageName();
+        String pagePath = sitePhysicalPath +cmsPage.getPagePhysicalPath() + cmsPage.getPageName();
 
         String content=cmsTemplateService.getTemplateFileByTemplateFileId(htmlFileId);
+
         Map data=getModelByPageId(pageId);
+
         if(StringUtils.isEmpty(content)||CollectionUtils.isEmpty(data)){
             return false;
         }

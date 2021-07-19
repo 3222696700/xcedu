@@ -36,16 +36,17 @@ public class CmsPageController extends BaseController implements CmsPageControll
 
         return cmsPageService.findList(page, size, queryPageRequest);
     }
+
     @GetMapping(value = "/get/{id}")
     @Override
     public CmsPage findById(@PathVariable("id") String Id) {
 
         return cmsPageService.findCmsPageById(Id);
     }
+
     @PostMapping(value = "/add")
     @Override
     public ResponseResult add(@RequestBody CmsPage cmsPage) {
-
         return cmsPageService.add(cmsPage);
     }
 
@@ -54,6 +55,7 @@ public class CmsPageController extends BaseController implements CmsPageControll
     public ResponseResult delete(@PathVariable("id") String id) {
         return cmsPageService.delete(id);
     }
+
 
     @PutMapping("/edit/{id}")
     @Override
