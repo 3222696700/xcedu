@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/xc-govern-center" />
-    <file type="web" url="file://$PROJECT_DIR$/xc-service-base-filesystem" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-eureka-server" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-authorization" />
-    <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms" />
-    <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-cms-client" />
-    <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-course" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-medium" />
     <file type="web" url="file://$PROJECT_DIR$/xc-service-manage-payment" />
   </component>
@@ -19,18 +14,11 @@
       <list>
         <option value="$PROJECT_DIR$/xc-framework-common/pom.xml" />
         <option value="$PROJECT_DIR$/xc-framework-model/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/pom.xml" />
         <option value="$PROJECT_DIR$/xc-framework-utils/pom.xml" />
         <option value="$PROJECT_DIR$/xc-service-api/pom.xml" />
-        <option value="$PROJECT_DIR$/xc-framework-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/xc-service-base-filesystem/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/xc-service-manage-cms-client/pom.xml" />
-        <option value="$PROJECT_DIR$/xc-service-manage-template/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="jdk1.8.0_151" project-jdk-type="JavaSDK" />
 </project>
