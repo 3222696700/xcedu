@@ -22,7 +22,6 @@ public class CmsTemplateController implements CmsTemplateControllerApi {
     @Resource
     CmsTemplateService cmsTemplateService;
 
-
     @Override
     @PostMapping("/save")
     public ResponseResult saveTemplate(@RequestParam("file")MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest){

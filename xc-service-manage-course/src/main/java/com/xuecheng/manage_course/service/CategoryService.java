@@ -4,7 +4,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import com.xuecheng.framework.domain.course.Category;
 import com.xuecheng.framework.domain.course.ext.CategoryNode;
-import com.xuecheng.manage_course.dao.CategoryMapper;
+import com.xuecheng.manage_course.mapper.CategoryMapper;
 import com.xuecheng.manage_course.util.CategoryNodeLevelUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -40,8 +40,6 @@ public class CategoryService extends CommonTreeService<CategoryNode,Category> im
         return list;
     }
 
-
-
     @Override
     public List<CategoryNode> domainListToTreeCustom(List<CategoryNode> vlist) {
         List<CategoryNode> rootList = new CopyOnWriteArrayList<>();
@@ -71,7 +69,6 @@ public class CategoryService extends CommonTreeService<CategoryNode,Category> im
             }
         }
     }
-
 
     @Override
     public int compare(CategoryNode o1, CategoryNode o2) {

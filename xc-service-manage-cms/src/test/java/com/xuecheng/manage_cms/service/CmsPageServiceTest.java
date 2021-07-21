@@ -65,6 +65,4 @@ public class CmsPageServiceTest {
         return gridFsTemplate.store(fileInputStream, "index_banner").toHexString();
 
     }
-
-
 }

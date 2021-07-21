@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @Description:com.xuecheng.api.cms
  * @version:1.0
  */
-@Api(value = "模板管理")
+@Api(value = "页面模板管理接口")
 public interface CmsTemplateControllerApi {
 
         @ApiOperation("保存模板文件和模板信息")
@@ -20,8 +20,4 @@ public interface CmsTemplateControllerApi {
 
         @ApiOperation("删除模板文件和模板信息")
         ResponseResult deletTemplate(String templateId);
-
-
-
-
 }

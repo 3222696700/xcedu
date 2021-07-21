@@ -10,10 +10,9 @@ import com.xuecheng.framework.exception.ExceptionCast;
 import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.framework.utils.GradeUtil;
-import com.xuecheng.manage_course.dao.CourseBaseMapper;
-import com.xuecheng.manage_course.dao.TeachPlanMapper;
+import com.xuecheng.manage_course.mapper.CourseBaseMapper;
+import com.xuecheng.manage_course.mapper.TeachPlanMapper;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -38,13 +37,8 @@ public class TeachplanService extends CommonTreeService<TeachplanNode, Teachplan
     @Resource
     TeachPlanMapper teachPlanMapper;
 
-
-
     @Resource
     CourseBaseMapper courseBaseMappe;
-
-    @Autowired
-    CategoryService categoryService;
 
 
     /**
@@ -59,7 +53,7 @@ public class TeachplanService extends CommonTreeService<TeachplanNode, Teachplan
      *
      * */
     @Transactional
-    public ResponseResult addTeachPlan(TeachplanNode teachplanNode){
+    public ResponseResult saveTeachplan(TeachplanNode teachplanNode){
 //        参数校验
         if(teachplanNode==null|| StringUtils.isEmpty(teachplanNode.getCourseid())||StringUtils.isEmpty(teachplanNode.getPname())){
             ExceptionCast.cast(CommonCode.INVALID_PARAM);

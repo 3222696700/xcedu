@@ -21,4 +21,5 @@ public class CmsConfigService {
     public CmsConfig getCmsConfigById(String id){
        return cmsConfigRepository.findById(id).orElse(null);
     }
+
 }

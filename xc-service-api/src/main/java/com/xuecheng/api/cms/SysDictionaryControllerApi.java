@@ -10,9 +10,9 @@ import io.swagger.annotations.ApiOperation;
  * @Description:com.xuecheng.api.cms
  * @version:1.0
  */
-@Api(value="cms数据字典接口")
+@Api(value="数据字典管理接口")
 public interface SysDictionaryControllerApi {
 
     @ApiOperation("根据id获取数据字典信息")
-    public SysDictionary getModel(String dType);
+    SysDictionary getSysDictionaryByDType(String dType);
 }
