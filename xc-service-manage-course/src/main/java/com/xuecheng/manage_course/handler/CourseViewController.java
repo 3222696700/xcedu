@@ -2,8 +2,10 @@ package com.xuecheng.manage_course.handler;
 
 import com.xuecheng.api.course.CourseViewControllerApi;
 import com.xuecheng.framework.domain.course.ext.CourseView;
+import com.xuecheng.framework.domain.course.response.CoursePublishResponseResult;
 import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.ResponseResult;
+import com.xuecheng.manage_course.client.CmsPageManageFeignClient;
 import com.xuecheng.manage_course.service.CourseViewService;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,11 +18,14 @@ import javax.annotation.Resource;
  * @version:1.0
  */
 @RestController
-@RequestMapping("/courseview")
+@RequestMapping("/course/view")
 public class CourseViewController implements CourseViewControllerApi {
 
     @Resource
     CourseViewService courseViewService;
+
+    @Resource
+    CmsPageManageFeignClient cmsPageManageFeignClient;
 
 
     @GetMapping("/{courseid}")
@@ -35,4 +40,11 @@ public class CourseViewController implements CourseViewControllerApi {
     public ResponseResult saveCourseView(CourseView courseView){
         return new ResponseResult(CommonCode.SUCCESS);
     }
+
+    @PostMapping("/preview/{id}")
+    @Override
+    public CoursePublishResponseResult coursePreview(@PathVariable("id") String id) {
+       return null;
+    }
+
 }

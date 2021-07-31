@@ -2,21 +2,23 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xc-framework-common" />
+        <module name="xc-service-manage-course" />
+        <module name="xc-service-manage-medium" />
         <module name="xc-service-manage-authorization" />
         <module name="xc-framework-model" />
-        <module name="xc-service-manage-medium" />
+        <module name="xc-framework-common" />
+        <module name="xc-framework-utils" />
+        <module name="xc-service-base-search" />
         <module name="xc-service-eureka-server" />
         <module name="xc-service-manage-payment" />
-        <module name="xc-service-api" />
         <module name="xc-service-base-filesystem" />
-        <module name="xc-service-manage-course" />
+        <module name="xc-service-api" />
         <module name="xc-service-manage-cms" />
-        <module name="xc-framework-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -26,6 +28,7 @@
       <module name="xc-framework-utils" target="1.8" />
       <module name="xc-service-api" target="1.8" />
       <module name="xc-service-base-filesystem" target="1.8" />
+      <module name="xc-service-base-search" target="1.8" />
       <module name="xc-service-eureka-server" target="1.8" />
       <module name="xc-service-manage-authorization" target="1.8" />
       <module name="xc-service-manage-cms" target="1.8" />
@@ -41,6 +44,7 @@
       <module name="xc-framework-utils" options="-parameters" />
       <module name="xc-service-api" options="-parameters" />
       <module name="xc-service-base-filesystem" options="-parameters" />
+      <module name="xc-service-base-search" options="-parameters" />
       <module name="xc-service-eureka-server" options="-parameters" />
       <module name="xc-service-manage-cms" options="-parameters" />
       <module name="xc-service-manage-course" options="-parameters" />

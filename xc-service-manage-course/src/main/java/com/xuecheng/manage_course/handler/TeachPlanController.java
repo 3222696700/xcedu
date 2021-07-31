@@ -23,7 +23,6 @@ public class TeachPlanController  implements TeachPlanControllerApi {
     TeachplanService teachplanService;
 
 
-    //===================================================================TeachPlan Manage=========================================================
     @Override
     @GetMapping("/teachplan/list/{courseid}")
     public TeachplanNode queryTeachPlanByCourseId(@PathVariable("courseid") String courseId)  {

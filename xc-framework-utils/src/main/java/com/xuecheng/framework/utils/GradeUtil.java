@@ -11,13 +11,10 @@ public class GradeUtil {
 
     public static final String ROOT_PARENT_ID="0";
 
-    public static final String CATEGORY_LEVEL_SEPARATOR="-";
     public static String calculateNextGrade(String grade) {
-        Integer integer=Integer.parseInt(grade);
+        int integer=Integer.parseInt(grade);
 
-        int oldLevel=integer.intValue();
-
-        int newLevel=oldLevel+1;
+        int newLevel= integer +1;
 
         return Integer.toString(newLevel);
     }

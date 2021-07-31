@@ -7,13 +7,9 @@ import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.framework.web.BaseController;
 import com.xuecheng.manage_cms.service.CmsPageService;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.servlet.ServletOutputStream;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 /**
  * @Auther:
@@ -49,6 +45,7 @@ public class CmsPageController extends BaseController implements CmsPageControll
         return cmsPageService.savePage(cmsPage);
     }
 
+
     @DeleteMapping("/del/{id}")
     @Override
     public ResponseResult delete(@PathVariable("id") String id) {
@@ -56,23 +53,6 @@ public class CmsPageController extends BaseController implements CmsPageControll
     }
 
 
-    @RequestMapping(value={"/preview/{id}"},method = {RequestMethod.GET})
-    @Override
-    public void preview(@PathVariable("id") String id)  {
-        String previewPage=cmsPageService.getPageHtml(id);
-        if(StringUtils.isEmpty(previewPage)){
-            try {
-                ServletOutputStream servletOutputStream = response.getOutputStream();
-                servletOutputStream.write(previewPage.getBytes(StandardCharsets.UTF_8));
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-    }
-    @PostMapping("/post/{pageId}")
-    @Override
-    public ResponseResult postPage(@PathVariable("pageId") String pageId) {
-        return cmsPageService.postCmsPage(pageId);
-    }
+
 
 }

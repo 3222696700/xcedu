@@ -11,6 +11,7 @@
         <module>../xc-service-manage-payment</module>
         <module>../xc-service-manage-authorization</module>
         <module>../xc-service-manage-medium</module>
+        <module>../xc-service-base-search</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

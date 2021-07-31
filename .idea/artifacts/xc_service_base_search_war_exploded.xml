@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="xc-service-base-search:war exploded">
+    <output-path>$PROJECT_DIR$/xc-service-base-search/target/xc-service-base-search</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>xc-service-base-search</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="xc-service-base-search" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/xc-service-base-search/target/xc-service-base-search/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="xc-service-base-search/web/Web" />
+    </root>
+  </artifact>
+</component>

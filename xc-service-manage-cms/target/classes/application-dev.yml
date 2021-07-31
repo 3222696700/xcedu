@@ -27,15 +27,19 @@ spring:
 #       Eureka Client Configuration
 eureka:
   client:
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
-      defaultZone: http://127.0.0.1:50101/eureka
+      defaultZone: ${EUREKA_SERVER:http://eureka-dev-1:50101/eureka,http://eureka-dev-2:50102/eureka}
   instance:
-    instance-id: ${spring.application.name}
+    instance-id: ${spring.application.name}:${server.port}
     prefer-ip-address: true
-    home-page-url-path: /
+
 
 info:
     app.name: xc-service-manage-cms
     company.name: xuecheng education
     build.artifactId: com.xuecheng
     build.version: 1.0-SNAPSHOT
+
+

@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="xc-service-manage-authorization.war">
+    <root id="archive" name="xc-service-manage-authorization-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="xc-service-manage-authorization:war exploded" />
     </root>
   </artifact>

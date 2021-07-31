@@ -15,25 +15,25 @@ import javax.annotation.Resource;
  * @version:1.0
  */
 @RestController
-@RequestMapping("/coursepic")
+@RequestMapping("/course/pic")
 public class CoursePicController implements CoursePicControllerApi {
 
     @Resource
     CoursePicService coursePicService;
 
-    @PostMapping("/coursepic/save")
+    @PostMapping("/save")
     @Override
     public ResponseResult saveCoursePic(CoursePic coursePic) {
         return coursePicService.saveCoursePic(coursePic);
     }
 
-    @GetMapping("/coursepic/get/{courseid}")
+    @GetMapping("/{courseid}")
     @Override
     public CoursePic queryCoursePicByCourseid(@PathVariable("courseid") String courseid) {
         return coursePicService.queryCoursePicByCourseid(courseid);
     }
 
-    @DeleteMapping("/coursepic/{courseid}")
+    @DeleteMapping("/{courseid}")
     @Override
     public ResponseResult deleteCoursePicByCourseid(@PathVariable("courseid") String courseid) {
         return coursePicService.deleteCoursePicByCourseid(courseid);

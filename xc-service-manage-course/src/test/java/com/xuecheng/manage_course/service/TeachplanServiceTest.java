@@ -1,5 +1,6 @@
 package com.xuecheng.manage_course.service;
 
+import com.alibaba.fastjson.JSON;
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,9 +24,9 @@ public class TeachplanServiceTest {
 
 
     @Test
-    public void testGetTeachPlanWithTree() throws IllegalAccessException, InstantiationException {
+    public void testGetTeachPlanWithTree()  {
         List<TeachplanNode> list=teachplanService.getTeachPlanWithTree("4028e581617f945f01617f9dabc40000");
-        System.out.println(list);
+        System.out.println(JSON.toJSON(list));
     }
 
     @Test
@@ -35,6 +36,6 @@ public class TeachplanServiceTest {
         teachplanNode.setCourseid("297e7c7c62b888f00162b8a965510001");
         teachplanNode.setPname("添加测试");
         teachplanNode.setParentid("");
-        teachplanService.addTeachPlan(teachplanNode);
+        teachplanService.saveTeachplan(teachplanNode);
     }
 }

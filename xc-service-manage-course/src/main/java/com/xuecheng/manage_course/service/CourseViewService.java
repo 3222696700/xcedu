@@ -9,6 +9,7 @@ import com.xuecheng.manage_course.mapper.CourseBaseMapper;
 import com.xuecheng.manage_course.mapper.CourseMarketMapper;
 import com.xuecheng.manage_course.mapper.CoursePicMapper;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
@@ -20,6 +21,7 @@ import java.util.List;
  * @Description:com.xuecheng.manage_course.service
  * @version:1.0
  */
+@Service
 public class CourseViewService {
     @Resource
     CourseBaseMapper courseBaseMapper;
@@ -51,4 +53,5 @@ public class CourseViewService {
 
         return courseView;
     }
+
 }

@@ -18,7 +18,6 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/cms/template")
 public class CmsTemplateController implements CmsTemplateControllerApi {
-
     @Resource
     CmsTemplateService cmsTemplateService;
 

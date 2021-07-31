@@ -2,6 +2,7 @@ package com.xuecheng.api.cms;
 
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
+import com.xuecheng.framework.domain.course.response.CommonPublishResponseResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
@@ -31,12 +32,7 @@ public interface CmsPageControllerApi {
 //  删除页面
     ResponseResult delete(String pageId);
 
-    @ApiOperation("页面预览")
-    public void preview(String pageId);
 
-    @ApiOperation("页面发布")
-//  发布页面
-    ResponseResult postPage(String pageId);
 
 
 

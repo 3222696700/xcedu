@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xc-service-base-search:war">
+    <output-path>$PROJECT_DIR$/xc-service-base-search/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xc-service-base-search</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xc-service-base-search.war">
+      <element id="artifact" artifact-name="xc-service-base-search:war exploded" />
+    </root>
+  </artifact>
+</component>
