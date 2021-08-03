@@ -43,23 +43,25 @@ public class CmsTemplateService {
     @Resource
     GridFSBucket gridFSBucket;
 
-    public ResponseResult saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest) {
+
+
+    public CmsTemplate saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest) {
         if(multipartFile==null
                 ||cmsTemplateRequest==null
                 ||StringUtils.isEmpty(cmsTemplateRequest.getTemplateName())
                 || StringUtils.isEmpty(cmsTemplateRequest.getSiteId())){
-            return new ResponseResult(CommonCode.FAIL);
+            return null;
         }
         String fileid=saveTemplatePage(multipartFile);
 
         if (StringUtils.isEmpty(fileid)) {
-            return new ResponseResult(CommonCode.FAIL);
+            return null;
         }
         CmsTemplate cmsTemplate = new CmsTemplate();
         cmsTemplateRequest.setTemplateFileId(fileid);
         BeanUtils.copyProperties(cmsTemplateRequest,cmsTemplate);
-        cmsTemplateRepository.save(cmsTemplate);
-        return new ResponseResult(CommonCode.SUCCESS);
+        CmsTemplate saveTemplate=cmsTemplateRepository.save(cmsTemplate);
+        return saveTemplate;
     }
 
     /**
@@ -93,6 +95,9 @@ public class CmsTemplateService {
      */
     public String getTemplateFileByTemplateFileId(String templateFileId) {
 
+        if(StringUtils.isEmpty(templateFileId)){
+            return null;
+        }
         GridFSFile gridFSFile = gridFsTemplate.findOne(Query.query(Criteria.where("_id").is(templateFileId)));
         if (gridFSFile == null) {
             ExceptionCast.cast(CmsCode.CMS_GENERATEHTML_TEMPLATEISNULL);
@@ -104,8 +109,8 @@ public class CmsTemplateService {
         try {
             content = IOUtils.toString(gridFsResource.getInputStream(), StandardCharsets.UTF_8);
         } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+                e.printStackTrace();
+                return null;
         } finally {
             gridFSDownloadStream.close();
         }

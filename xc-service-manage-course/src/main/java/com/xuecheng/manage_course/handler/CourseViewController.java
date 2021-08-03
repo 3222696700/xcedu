@@ -1,11 +1,9 @@
 package com.xuecheng.manage_course.handler;
 
 import com.xuecheng.api.course.CourseViewControllerApi;
+import com.xuecheng.framework.domain.cms.response.CmsPagePostResult;
 import com.xuecheng.framework.domain.course.ext.CourseView;
-import com.xuecheng.framework.domain.course.response.CoursePublishResponseResult;
-import com.xuecheng.framework.model.response.CommonCode;
-import com.xuecheng.framework.model.response.ResponseResult;
-import com.xuecheng.manage_course.client.CmsPageManageFeignClient;
+import com.xuecheng.framework.domain.course.response.CommonPublishResponseResult;
 import com.xuecheng.manage_course.service.CourseViewService;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,27 +22,25 @@ public class CourseViewController implements CourseViewControllerApi {
     @Resource
     CourseViewService courseViewService;
 
-    @Resource
-    CmsPageManageFeignClient cmsPageManageFeignClient;
-
-
     @GetMapping("/{courseid}")
     @Override
     public CourseView getCourseViewByCourseid(@PathVariable("courseid") String courseid) {
         return courseViewService.getCourseViewByCourseid(courseid);
     }
 
-    //todo:新增课程详情
-    @PostMapping("/save")
-    @Override
-    public ResponseResult saveCourseView(CourseView courseView){
-        return new ResponseResult(CommonCode.SUCCESS);
-    }
-
     @PostMapping("/preview/{id}")
     @Override
-    public CoursePublishResponseResult coursePreview(@PathVariable("id") String id) {
-       return null;
+    public CommonPublishResponseResult coursePreview(@PathVariable("id") String id) {
+        return courseViewService.courseViewPreView(id);
     }
+
+    @PostMapping("/post/{id}")
+    @Override
+    public CmsPagePostResult coursePost(@PathVariable("id") String id) {
+        return courseViewService.coursePost(id);
+    }
+
+
+
 
 }

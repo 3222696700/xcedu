@@ -1,6 +1,10 @@
 package com.xuecheng.manage_cms.handler;
 
 import com.xuecheng.api.cms.CmsSiteControllerApi;
+import com.xuecheng.framework.domain.cms.CmsSite;
+import com.xuecheng.manage_cms.service.CmsSiteService;
+
+import javax.annotation.Resource;
 
 /**
  * @Auther:ghost
@@ -10,4 +14,11 @@ import com.xuecheng.api.cms.CmsSiteControllerApi;
  */
 public class CmsSiteController implements CmsSiteControllerApi {
 
+    @Resource
+    CmsSiteService cmsSiteService;
+
+    @Override
+    public CmsSite findCmsSiteBySiteId(String siteId) {
+        return cmsSiteService.findCmsSiteBySiteId(siteId);
+    }
 }

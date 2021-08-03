@@ -1,5 +1,6 @@
 package com.xuecheng.api.cms;
 
+import com.xuecheng.framework.domain.cms.CmsTemplate;
 import com.xuecheng.framework.domain.cms.request.CmsTemplateRequest;
 import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
@@ -16,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface CmsTemplateControllerApi {
 
         @ApiOperation("保存模板文件和模板信息")
-        ResponseResult saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest);
+        CmsTemplate saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest);
 
         @ApiOperation("删除模板文件和模板信息")
         ResponseResult deletTemplate(String templateId);

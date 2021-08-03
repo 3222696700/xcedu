@@ -47,3 +47,11 @@ info:
   company.name: xuecheng education
   build.artifactId: com.xuecheng
   build.version: 1.0-SNAPSHOT
+# 课程详情页面预览基本信息
+course-publish:
+  siteId: 60f62dab6479f41268dd3933
+  templateId: 61055ded6479f41df01009c6
+  previewUrl: http://www.xuecheng.com/cms/page/view/
+  pageWebPath: /course/detail/
+  pagePhysicalPath: /course/detail/
+  dataUrlPre: http://localhost:31200/course/view/

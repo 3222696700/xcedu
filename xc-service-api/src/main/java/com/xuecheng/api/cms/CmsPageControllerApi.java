@@ -2,7 +2,7 @@ package com.xuecheng.api.cms;
 
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
-import com.xuecheng.framework.domain.course.response.CommonPublishResponseResult;
+import com.xuecheng.framework.domain.cms.response.CmsPageResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
@@ -23,10 +23,10 @@ public interface CmsPageControllerApi {
 
     //    保存页面
     @ApiOperation("保存页面（页面存在则更新，不存在则新增）")
-    ResponseResult add(CmsPage cmsPage);
+    ResponseResult savePage(CmsPage cmsPage);
 
     @ApiOperation("根据ID查询页面")
-    CmsPage findById(String Id);
+    CmsPageResult findById(String Id);
 
     @ApiOperation("删除页面")
 //  删除页面

@@ -1,13 +1,21 @@
 package com.xuecheng.manage_cms.handler;
 
 import com.xuecheng.api.cms.PageViewControllerApi;
-import com.xuecheng.framework.domain.course.response.CommonPublishResponseResult;
+import com.xuecheng.framework.domain.cms.response.CmsPagePostResult;
 import com.xuecheng.framework.model.response.ResponseResult;
+import com.xuecheng.framework.web.BaseController;
 import com.xuecheng.manage_cms.service.PageViewService;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @Auther:ghost
@@ -15,29 +23,32 @@ import javax.annotation.Resource;
  * @Description:com.xuecheng.manage_cms.handler
  * @version:1.0
  */
-@RestController("/cms/page")
-public class PageViewController  implements PageViewControllerApi {
+@Controller
+@RequestMapping("/cms/page")
+public class PageViewController extends BaseController implements PageViewControllerApi {
     @Resource
     PageViewService pageViewService;
 
-    @GetMapping(value={"/view/{id}"})
+    @RequestMapping(value={"/view/{id}"},method= RequestMethod.GET)
     @Override
-    public CommonPublishResponseResult preview(@PathVariable("id") String id)  {
-        String previewPage=pageViewService.getPageHtml(id);
-        if(StringUtils.isEmpty(previewPage)){
-//            try {
-//                ServletOutputStream servletOutputStream = response.getOutputStream();
-//                response.setHeader("Content-Type","text/html;charset=UTF-8");
-//                servletOutputStream.write(previewPage.getBytes(StandardCharsets.UTF_8));
-//            }catch (IOException e){
-//                e.printStackTrace();
-//            }
+    public void preview(@PathVariable("id") String id)  {
+        String previewPage=pageViewService.previewPage(id);
+        if(!StringUtils.isEmpty(previewPage)){
+            try {
+                ServletOutputStream servletOutputStream = response.getOutputStream();
+                response.setHeader("Content-Type","text/html;charset=UTF-8");
+                servletOutputStream.write(previewPage.getBytes(StandardCharsets.UTF_8));
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }
-        return null;
     }
+
     @PostMapping("/post/{id}")
     @Override
-    public ResponseResult postPage(@PathVariable("id") String pageId) {
+    public CmsPagePostResult postPage(@PathVariable("id") String pageId) {
         return pageViewService.postCmsPage(pageId);
     }
+
+
 }

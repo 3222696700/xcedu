@@ -1,6 +1,7 @@
 package com.xuecheng.manage_cms.handler;
 
 import com.xuecheng.api.cms.CmsTemplateControllerApi;
+import com.xuecheng.framework.domain.cms.CmsTemplate;
 import com.xuecheng.framework.domain.cms.request.CmsTemplateRequest;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.service.CmsTemplateService;
@@ -23,9 +24,10 @@ public class CmsTemplateController implements CmsTemplateControllerApi {
 
     @Override
     @PostMapping("/save")
-    public ResponseResult saveTemplate(@RequestParam("file")MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest){
+    public CmsTemplate saveTemplate(@RequestParam("file")MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest){
        return cmsTemplateService.saveTemplate(multipartFile,cmsTemplateRequest);
     }
+
     @Override
     @DeleteMapping("/delete")
 

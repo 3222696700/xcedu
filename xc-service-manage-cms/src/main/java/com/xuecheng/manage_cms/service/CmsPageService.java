@@ -10,9 +10,6 @@ import com.xuecheng.framework.model.response.QueryResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.mapper.CmsPageRepository;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
@@ -30,8 +27,6 @@ import java.util.Optional;
  * */
 @Service
 public class CmsPageService {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(CmsPageService.class);
 
     @Resource
     CmsPageRepository cmsPageRepository;
@@ -67,14 +62,9 @@ public class CmsPageService {
 
         Example<CmsPage> example = Example.of(cmsPage, exampleMatcher);
 
-        if (page <= 0) {
-            page = 1;
-        }
-        page = page - 1;
+        page= page<=0 ? 1: page-1;
 
-        if (size <= 0) {
-            size = 10;
-        }
+        size=size<=0 ? size :10;
 
         Pageable pageable = PageRequest.of(page, size);
 
@@ -101,6 +91,7 @@ public class CmsPageService {
         if (cmsPage == null) {
             return new CmsPageResult(CmsCode.CMS_PAGE_NOT_EXISTS, null);
         }
+
         if (StringUtils.isEmpty(cmsPage.getPageId())) {
             //页面唯一性校验
             CmsPage currentPage = cmsPageRepository.findByPageNameAndSiteIdAndPageWebPath(cmsPage.getPageName(),
@@ -108,16 +99,13 @@ public class CmsPageService {
             if (currentPage != null) {
                 return new CmsPageResult(CmsCode.CMS_ADDPAGE_EXISTSNAME, cmsPage);
             }
-            return (cmsPageRepository.save(cmsPage) == null) ? new CmsPageResult(CommonCode.FAIL, cmsPage) : new CmsPageResult(CommonCode.SUCCESS, cmsPage);
         }
         CmsPage editCmspage= cmsPageRepository.findById(cmsPage.getPageId()).orElse(null);
 
         if(editCmspage==null){
             return new CmsPageResult(CommonCode.FAIL, cmsPage);
         }
-        BeanUtils.copyProperties(cmsPage,editCmspage);
-        cmsPageRepository.save(editCmspage);
-        return(cmsPageRepository.save(cmsPage) == null) ? new CmsPageResult(CommonCode.FAIL, editCmspage) : new CmsPageResult(CommonCode.SUCCESS, editCmspage);
+        return cmsPageRepository.save(cmsPage)==null ? new CmsPageResult(CommonCode.FAIL, editCmspage) : new CmsPageResult(CommonCode.SUCCESS, editCmspage);
     }
 
     /**
@@ -128,7 +116,6 @@ public class CmsPageService {
      * @Date:2021/6/22
      */
     public ResponseResult delete(String id) {
-
         Optional<CmsPage> optional = cmsPageRepository.findById(id);
         if (optional.isPresent()) {
             cmsPageRepository.deleteById(id);

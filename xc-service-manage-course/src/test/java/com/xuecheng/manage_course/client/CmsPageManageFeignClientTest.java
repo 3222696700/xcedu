@@ -1,6 +1,5 @@
 package com.xuecheng.manage_course.client;
 
-import com.xuecheng.framework.domain.cms.CmsPage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +22,8 @@ public class CmsPageManageFeignClientTest {
 
     @Test
     public void testFindCmsPageByPageId(){
-        CmsPage cmsPage=cmsPageManageFeignClient.findCmsPageByPageId("60e3bb3d6479f42bd0934514");
-        System.out.println(cmsPage);
+//        CmsPage cmsPage=cmsPageManageFeignClient.findCmsPageByPageId("60e3bb3d6479f42bd0934514");
+//        System.out.println(cmsPage);
     }
     @Test
     public void testPreView(){

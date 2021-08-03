@@ -18,7 +18,7 @@
 
     <sql id="Base_Column_List" >
         `id`,`name`,`users`,`mt`,`grade`,`studymodel`,`teachmode`,`description`,`st`,`status`,`company_id`,`user_id`
-   </sql>
+    </sql>
 
     <select id="findCourseBaseById" parameterType="java.lang.String"
         resultType="com.xuecheng.framework.domain.course.CourseBase">
@@ -32,4 +32,130 @@
         <include refid="Base_Column_List"/>
         from `xc_course`.`course_base`
     </select>
+
+    <insert id="insertSelective" parameterType="com.xuecheng.framework.domain.course.CourseBase">
+        <selectKey keyColumn="id" keyProperty="id" statementType="STATEMENT" order="BEFORE" resultType="java.lang.String">
+            select replace(uuid(),'-','') from dual
+        </selectKey>
+        insert into `xc_course`.`course_base`
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="users != null" >
+                users,
+            </if>
+            <if test="mt != null" >
+                mt,
+            </if>
+            <if test="grade != null" >
+                grade,
+            </if>
+            <if test="studymodel != null" >
+                studymodel,
+            </if>
+            <if test="teachmode != null" >
+                teachmode,
+            </if>
+            <if test="description != null" >
+                description,
+            </if>
+            <if test="st != null" >
+                st,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+            <if test="companyId != null" >
+                company_id,
+            </if>
+            <if test="userId != null" >
+                user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="users != null" >
+                #{users,jdbcType=VARCHAR},
+            </if>
+            <if test="mt != null" >
+                #{mt,jdbcType=VARCHAR},
+            </if>
+            <if test="grade != null" >
+                #{grade,jdbcType=VARCHAR},
+            </if>
+            <if test="studymodel != null" >
+                #{studymodel,jdbcType=VARCHAR},
+            </if>
+            <if test="teachmode != null" >
+                #{teachmode,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null" >
+                #{description,jdbcType=CLOB},
+            </if>
+            <if test="st != null" >
+                #{st,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="companyId != null" >
+                #{companyId,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null" >
+                #{userId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.xuecheng.framework.domain.course.CourseBase" >
+        update `xc_course`.`course_base`
+        <set>
+            <if test="id != null" >
+                id = #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                name = #{name,jdbcType=INTEGER},
+            </if>
+            <if test="users != null" >
+                users = #{users,jdbcType=VARCHAR},
+            </if>
+            <if test="mt != null" >
+                mt = #{mt,jdbcType=INTEGER},
+            </if>
+            <if test="grade != null" >
+                grade = #{grade,jdbcType=VARCHAR},
+            </if>
+            <if test="studymodel != null" >
+                studymodel = #{studymodel,jdbcType=VARCHAR},
+            </if>
+            <if test="teachmode != null" >
+                teachmode = #{teachmode,jdbcType=TIMESTAMP},
+            </if>
+            <if test="description != null" >
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="st != null" >
+                st = #{st,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="companyId != null" >
+                company_id = #{companyId,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null" >
+                user_id = #{userId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
 </mapper>

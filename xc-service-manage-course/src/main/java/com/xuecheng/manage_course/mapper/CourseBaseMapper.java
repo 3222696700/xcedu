@@ -12,4 +12,8 @@ public interface CourseBaseMapper {
    CourseBase findCourseBaseById(String id);
 
    Page<CourseBase> findAllCourseBase();
+
+    int insertSelective(CourseBase courseBase);
+
+    int updateByPrimaryKeySelective(CourseBase courseBase);
 }

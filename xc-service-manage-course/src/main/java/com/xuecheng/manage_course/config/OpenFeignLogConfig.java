@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @Description:com.xuecheng.manage_course.config
  * @version:1.0
  */
+//解决日志冲突
 @Configuration
 public class OpenFeignLogConfig {
     @Bean
