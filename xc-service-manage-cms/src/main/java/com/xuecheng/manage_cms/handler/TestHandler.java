@@ -48,6 +48,7 @@ public class TestHandler {
             Map data = JSONObject.parseObject(JSON.toJSONString(courseView));
 
             map.putAll(data);
+            System.out.println("helloworld");
 
             return "course";
     }

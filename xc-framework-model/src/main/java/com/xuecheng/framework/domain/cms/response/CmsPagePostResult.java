@@ -1,5 +1,6 @@
 package com.xuecheng.framework.domain.cms.response;
 
+import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.framework.model.response.ResultCode;
 import lombok.Data;
@@ -16,5 +17,11 @@ public class CmsPagePostResult extends ResponseResult {
     public CmsPagePostResult(ResultCode resultCode,String url){
         super(resultCode);
         this.url=url;
+    }
+    public static CmsPagePostResult postSuccess(String url){
+        return new CmsPagePostResult(CommonCode.SUCCESS,url);
+    }
+    public static CmsPagePostResult postFail(){
+        return new CmsPagePostResult(CommonCode.FAIL,"");
     }
 }

@@ -5,10 +5,10 @@ import com.xuecheng.framework.exception.ExceptionCast;
 import lombok.Data;
 import org.csource.common.MyException;
 import org.csource.fastdfs.StorageClient1;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 
 /**
@@ -19,9 +19,9 @@ import java.io.IOException;
  */
 @Component
 @Data
-public class FastDFSUtil<T> {
+public class FastDFSUtil {
 
-    @Autowired
+    @Resource
     private StorageClient1 storageClient1;
 
 //    上传文件

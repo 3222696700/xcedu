@@ -7,11 +7,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
+import java.io.*;
 import java.util.Map;
 
 /**
@@ -40,28 +36,22 @@ public class FreeMarkerUtil {
         return null;
     }
 
-    public static boolean uploadePageToServer(String page,String pagePath){
-
-        if(StringUtils.isEmpty(page)){
-            return false;
-        }
-
-        InputStream inputStream= IOUtils.toInputStream(page, StandardCharsets.UTF_8);
+    public static boolean uploadePageToServer(InputStream inputStream,String pagePath){
         if (inputStream == null) {
             return false;
         }
-        FileOutputStream fileOutputStream = null;
+        OutputStream outputStream = null;
 
         try {
-            fileOutputStream = new FileOutputStream(new File(pagePath));
-            IOUtils.copy(inputStream, fileOutputStream);
+            outputStream = new FileOutputStream(new File(pagePath));
+            IOUtils.copy(inputStream, outputStream);
         } catch (IOException e) {
             e.printStackTrace();
             return false;
         } finally {
             try {
-                if (fileOutputStream != null) {
-                    fileOutputStream.close();
+                if (outputStream != null) {
+                    outputStream.close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();

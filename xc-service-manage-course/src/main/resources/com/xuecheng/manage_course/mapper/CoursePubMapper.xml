@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuecheng.manage_course.mapper.CoursePubMapper">
+    <resultMap id="BaseResultMap" type="com.xuecheng.framework.domain.course.CoursePub" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="users" property="users" jdbcType="VARCHAR" />
+        <result column="mt" property="mt" jdbcType="VARCHAR" />
+        <result column="grade" property="grade" jdbcType="VARCHAR" />
+        <result column="studymodel" property="description" jdbcType="VARCHAR" />
+        <result column="teachmode" property="teachmode" jdbcType="VARCHAR" />
+        <result column="description" property="description" jdbcType="CLOB" />
+        <result column="st" property="st" jdbcType="VARCHAR" />
+        <result column="pic" property="pic" jdbcType="" />
+        <result column="timestamp" property="timestamp" jdbcType="" />
+        <result column="charge" property="charge" jdbcType="" />
+        <result column="valid" property="valid" jdbcType="" />
+        <result column="qq" property="qq" jdbcType="" />
+        <result column="price" property="price" jdbcType="" />
+        <result column="price_old" property="price_old" jdbcType="" />
+        <result column="expires" property="expires" jdbcType="" />
+        <result column="teachplan" property="teachplan" jdbcType="" />
+        <result column="pub_time" property="pubTime" jdbcType="" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+    `id`,`name`,`users`,`mt`,`st`,`grade`,`studymodel`,`teachmode`,`description`, `timestamp`,`charge`,`valid`,`qq`,
+    `price`,`price_old`,`expires`,`start_time`,`end_time`,`pic`,`teachplan`,`pub_time`
+    </sql>
+
+    <insert id="insertSelective" parameterType="com.xuecheng.framework.domain.course.CoursePub">
+        <selectKey keyColumn="id" keyProperty="id" statementType="STATEMENT" order="BEFORE" resultType="java.lang.String">
+            select replace(uuid(),'-','') from dual
+        </selectKey>
+        insert into `xc_course`.`course_pub`
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="users != null" >
+                users,
+            </if>
+            <if test="mt != null" >
+                mt,
+            </if>
+            <if test="grade != null" >
+                grade,
+            </if>
+            <if test="studymodel != null" >
+                studymodel,
+            </if>
+            <if test="teachmode != null" >
+                teachmode,
+            </if>
+            <if test="description != null" >
+                description,
+            </if>
+            <if test="st != null" >
+                st,
+            </if>
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="users != null" >
+                #{users,jdbcType=VARCHAR},
+            </if>
+            <if test="mt != null" >
+                #{mt,jdbcType=VARCHAR},
+            </if>
+            <if test="grade != null" >
+                #{grade,jdbcType=VARCHAR},
+            </if>
+            <if test="studymodel != null" >
+                #{studymodel,jdbcType=VARCHAR},
+            </if>
+            <if test="teachmode != null" >
+                #{teachmode,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null" >
+                #{description,jdbcType=CLOB},
+            </if>
+            <if test="st != null" >
+                #{st,jdbcType=VARCHAR},
+            </if>
+
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.xuecheng.framework.domain.course.CourseBase" >
+        update `xc_course`.`course_base`
+        <set>
+            <if test="id != null" >
+                id = #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                name = #{name,jdbcType=INTEGER},
+            </if>
+            <if test="users != null" >
+                users = #{users,jdbcType=VARCHAR},
+            </if>
+            <if test="mt != null" >
+                mt = #{mt,jdbcType=INTEGER},
+            </if>
+            <if test="grade != null" >
+                grade = #{grade,jdbcType=VARCHAR},
+            </if>
+            <if test="studymodel != null" >
+                studymodel = #{studymodel,jdbcType=VARCHAR},
+            </if>
+            <if test="teachmode != null" >
+                teachmode = #{teachmode,jdbcType=TIMESTAMP},
+            </if>
+            <if test="description != null" >
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="st != null" >
+                st = #{st,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="companyId != null" >
+                company_id = #{companyId,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null" >
+                user_id = #{userId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+</mapper>

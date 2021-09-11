@@ -2,7 +2,6 @@ package com.xuecheng.manage_cms.handler;
 
 import com.xuecheng.api.cms.PageViewControllerApi;
 import com.xuecheng.framework.domain.cms.response.CmsPagePostResult;
-import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.framework.web.BaseController;
 import com.xuecheng.manage_cms.service.PageViewService;
 import org.springframework.stereotype.Controller;
@@ -49,6 +48,4 @@ public class PageViewController extends BaseController implements PageViewContro
     public CmsPagePostResult postPage(@PathVariable("id") String pageId) {
         return pageViewService.postCmsPage(pageId);
     }
-
-
 }

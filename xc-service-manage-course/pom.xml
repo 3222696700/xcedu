@@ -11,6 +11,7 @@
 
     <artifactId>xc-service-manage-course</artifactId>
 
+
     <dependencies>
         <dependency>
             <groupId>com.xuecheng</groupId>

@@ -2,19 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810817f0-4767-4177-86e4-c8052edc4ef9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/xc-service-base-search/src/main/java/com/xuecheng/base_search/SearchBaseServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-search/src/main/java/com/xuecheng/base_search/config/ElasticsearchConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-search/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-search/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xc-service-base-search/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CmsPageControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CmsPageControllerApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CmsSiteControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/CmsSiteControllerApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/PageViewControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/cms/PageViewControllerApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseViewControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-api/target/classes/com/xuecheng/api/course/CourseViewControllerApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-search/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-search/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-base-search/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc-service-manage-authorization/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-authorization/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-api/src/main/java/com/xuecheng/api/search/SearchBaseHandlerApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-search/src/main/java/com/xuecheng/base_search/handler/SearchBaseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-base-search/src/main/java/com/xuecheng/base_search/utils/ElasticSearchClientUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/mapper/CoursePubMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CoursePubService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/resources/com/xuecheng/manage_course/mapper/CoursePubMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-common/src/main/java/com/xuecheng/framework/model/response/CommonCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-common/src/main/java/com/xuecheng/framework/model/response/CommonCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/cms/response/CmsPagePostResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/src/main/java/com/xuecheng/framework/domain/cms/response/CmsPagePostResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/response/CmsPagePostResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-framework-model/target/classes/com/xuecheng/framework/domain/cms/response/CmsPagePostResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/util/FastDFSUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-base-filesystem/src/main/java/com/xuecheng/filesystem/util/FastDFSUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-authorization/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-authorization/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/ManageCmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/ManageCmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/config/MongoDBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/config/MongoDBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/CmsConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/PageViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/PageViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/TestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/TestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsSiteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsSiteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/CmsTemplateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/PageViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/PageViewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/SysDictionaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/service/SysDictionaryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/util/FreeMarkerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/util/FreeMarkerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/src/test/java/com/xuecheng/manage_cms/service/CmsPageServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/src/test/java/com/xuecheng/manage_cms/service/CmsPageServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsConfigController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsConfigController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsSiteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/CmsSiteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/PageViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/PageViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/TestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/handler/TestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsConfigService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsConfigService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsPageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsPageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsSiteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsSiteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsTemplateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/CmsTemplateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/PageViewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/PageViewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/SysDictionaryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/service/SysDictionaryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/util/FreeMarkerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/classes/com/xuecheng/manage_cms/util/FreeMarkerUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-cms/target/test-classes/com/xuecheng/manage_cms/service/CmsPageServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-cms/target/test-classes/com/xuecheng/manage_cms/service/CmsPageServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/CourseViewService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,18 +122,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xc-service-base-search/src/main/java/com/xuecheng/base_search/config" />
+    <property name="last_opened_file_path" value="E:/WorkSpace/apollo" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.31408775" />
     <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\xcedu\xc-govern-center\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.xuecheng.manage_course.service" />
       <recent name="" />
       <recent name="com.xuecheng.filesystem.service" />
       <recent name="com.xuecheng.manage_course" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xuecheng.manage_cms.mapper" />
+      <recent name="com.xuecheng.manage_cms_client.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\xcedu\xc-service-base-search\src\main\java\com\xuecheng\base_search\config" />
@@ -114,26 +149,19 @@
       <recent name="F:\xcedu\xc-framework-model\src\main\java\com\xuecheng\framework\domain\course\ext" />
       <recent name="F:\xcedu\xc-service-manage-course\src" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.xuecheng.manage_cms.mapper" />
-      <recent name="com.xuecheng.manage_cms_client.config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\xcedu\xc-govern-center\src\main\resources" />
-    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SearchBaseServiceApplication">
-    <configuration name="CmsPageManageFeignClientTest.testPreView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xc-service-manage-course" />
+  <component name="RunManager" selected="JUnit.CmsPageServiceTest.test">
+    <configuration name="CmsPageServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xc-service-manage-cms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xuecheng.manage_course.client.*" />
+          <option name="PATTERN" value="com.xuecheng.manage_cms.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.xuecheng.manage_course.client" />
-      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_course.client.CmsPageManageFeignClientTest" />
-      <option name="METHOD_NAME" value="testPreView" />
+      <option name="PACKAGE_NAME" value="com.xuecheng.manage_cms.service" />
+      <option name="MAIN_CLASS_NAME" value="com.xuecheng.manage_cms.service.CmsPageServiceTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -292,7 +320,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CmsPageManageFeignClientTest.testPreView" />
       <item itemvalue="JUnit.CourseViewServiceTest.testGetCourseViewByCourseid" />
       <item itemvalue="JUnit.TeachplanServiceTest.testGetTeachPlanWithTree" />
       <item itemvalue="JUnit.CmsPageServiceTest.testGetPageHtml" />
@@ -307,14 +334,15 @@
       <item itemvalue="Spring Boot.ManageCourseApplication" />
       <item itemvalue="Spring Boot.XCEurekaServerApplication1" />
       <item itemvalue="Spring Boot.SearchBaseServiceApplication" />
+      <item itemvalue="JUnit.CmsPageServiceTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CmsPageServiceTest.test" />
         <item itemvalue="Spring Boot.SearchBaseServiceApplication" />
         <item itemvalue="JUnit.CmsPageServiceTest.testGetPageHtml" />
         <item itemvalue="JUnit.CourseViewServiceTest.testGetCourseViewByCourseid" />
         <item itemvalue="JUnit.TeachplanServiceTest.testGetTeachPlanWithTree" />
-        <item itemvalue="JUnit.CmsPageManageFeignClientTest.testPreView" />
       </list>
     </recent_temporary>
   </component>
@@ -429,7 +457,25 @@
       <workItem from="1627904550009" duration="6503000" />
       <workItem from="1627959457596" duration="5523000" />
       <workItem from="1628053353569" duration="463000" />
-      <workItem from="1628072268370" duration="825000" />
+      <workItem from="1628072268370" duration="954000" />
+      <workItem from="1628125343587" duration="11661000" />
+      <workItem from="1628262479921" duration="58000" />
+      <workItem from="1628659151977" duration="1177000" />
+      <workItem from="1628678602824" duration="1389000" />
+      <workItem from="1628680285926" duration="503000" />
+      <workItem from="1628680808382" duration="8000" />
+      <workItem from="1629170137670" duration="688000" />
+      <workItem from="1629193145912" duration="1080000" />
+      <workItem from="1629468703791" duration="1282000" />
+      <workItem from="1629600994436" duration="973000" />
+      <workItem from="1629700999431" duration="605000" />
+      <workItem from="1630489709548" duration="1424000" />
+      <workItem from="1630578880402" duration="69000" />
+      <workItem from="1630578979137" duration="652000" />
+      <workItem from="1631094662038" duration="124000" />
+      <workItem from="1631262674118" duration="2641000" />
+      <workItem from="1631279741987" duration="5256000" />
+      <workItem from="1631329506307" duration="13085000" />
     </task>
     <task id="LOCAL-00001" summary="改动如下：&#10;1、学成教育项目基础工程导入完毕&#10;2、新建xc-service-manage-cms模块">
       <created>1623592234235</created>
@@ -613,10 +659,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="194" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1626842415207" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627873811564">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631282650435">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1627873811564" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1631282650435" />
     <state x="172" y="78" key="#org.intellij.plugins.intelliLang.inject.config.ui.BaseInjectionDialog" timestamp="1625892885843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -637,58 +683,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-251" y="91" width="1554" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1627724935309" />
-    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1627917100193">
+    <state x="570" y="103" key="FileChooserDialogImpl" timestamp="1631339910852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1627917100193" />
-    <state width="1493" height="329" key="GridCell.Tab.0.bottom" timestamp="1628073103242">
+    <state x="570" y="103" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1631339910852" />
+    <state width="1493" height="384" key="GridCell.Tab.0.bottom" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="329" key="GridCell.Tab.0.center" timestamp="1628073103242">
+    <state width="1493" height="384" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.0.center" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="329" key="GridCell.Tab.0.left" timestamp="1628073103242">
+    <state width="1493" height="384" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.0.left" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="329" key="GridCell.Tab.0.right" timestamp="1628073103242">
+    <state width="1493" height="384" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.0.right" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="329" key="GridCell.Tab.1.bottom" timestamp="1628073103242">
+    <state width="1493" height="384" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.1.bottom" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="329" key="GridCell.Tab.1.center" timestamp="1628073103242">
+    <state width="1493" height="384" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.1.center" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="329" key="GridCell.Tab.1.left" timestamp="1628073103242">
+    <state width="1493" height="384" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.1.left" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="329" key="GridCell.Tab.1.right" timestamp="1628073103242">
+    <state width="1493" height="384" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.1.right" timestamp="1631342697222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1628073103242" />
-    <state width="1493" height="384" key="GridCell.Tab.2.bottom" timestamp="1627741832490">
+    <state width="1493" height="384" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1631342697222" />
+    <state width="1493" height="384" key="GridCell.Tab.2.bottom" timestamp="1631340840877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="384" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627741832490" />
-    <state width="1493" height="384" key="GridCell.Tab.2.center" timestamp="1627741832490">
+    <state width="1493" height="384" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1631340840877" />
+    <state width="1493" height="384" key="GridCell.Tab.2.center" timestamp="1631340840876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="384" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1627741832490" />
-    <state width="1493" height="384" key="GridCell.Tab.2.left" timestamp="1627741832490">
+    <state width="1493" height="384" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1631340840876" />
+    <state width="1493" height="384" key="GridCell.Tab.2.left" timestamp="1631340840876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="384" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1627741832490" />
-    <state width="1493" height="384" key="GridCell.Tab.2.right" timestamp="1627741832490">
+    <state width="1493" height="384" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1631340840876" />
+    <state width="1493" height="384" key="GridCell.Tab.2.right" timestamp="1631340840877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="384" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1627741832490" />
+    <state width="1493" height="384" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1631340840877" />
     <state x="429" y="110" key="NewModule_or_Project.wizard" timestamp="1626863511212">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -733,10 +779,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1625894173361" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1627824653326">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1631264511909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1627824653326" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1631264511909" />
     <state x="510" y="70" key="spring file set editor" timestamp="1627283935728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -750,55 +796,10 @@
           <line>298</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>188</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>190</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>192</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>194</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>195</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>197</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>196</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>180</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>174</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/xc-service-manage-course/src/main/java/com/xuecheng/manage_course/service/TeachplanService.java</url>
-          <line>173</line>
-          <option name="timeStamp" value="91" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/xc-service-manage-cms/src/main/java/com/xuecheng/manage_cms/handler/PageViewController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

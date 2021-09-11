@@ -43,8 +43,6 @@ public class CmsTemplateService {
     @Resource
     GridFSBucket gridFSBucket;
 
-
-
     public CmsTemplate saveTemplate(MultipartFile multipartFile, CmsTemplateRequest cmsTemplateRequest) {
         if(multipartFile==null
                 ||cmsTemplateRequest==null
@@ -115,7 +113,6 @@ public class CmsTemplateService {
             gridFSDownloadStream.close();
         }
         return content;
-
     }
 
     public ResponseResult deletTemplateBase(String templateId) {
@@ -123,6 +120,7 @@ public class CmsTemplateService {
             return new ResponseResult(CommonCode.FAIL);
         }
         CmsTemplate cmsTemplate=cmsTemplateRepository.findById(templateId).orElse(null);
+
         if(cmsTemplate==null||StringUtils.isEmpty(cmsTemplate.getTemplateFileId())){
             return new ResponseResult(CommonCode.FAIL);
         }

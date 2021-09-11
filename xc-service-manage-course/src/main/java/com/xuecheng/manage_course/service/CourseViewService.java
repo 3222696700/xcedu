@@ -107,5 +107,4 @@ public class CourseViewService {
         cmsPage.setSiteId(courseViewPageConfig.getPublish_siteId());
         return cmsPage;
     }
-
 }

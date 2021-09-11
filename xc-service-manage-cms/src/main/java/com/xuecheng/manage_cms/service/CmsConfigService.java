@@ -1,6 +1,7 @@
 package com.xuecheng.manage_cms.service;
 
 import com.xuecheng.framework.domain.cms.CmsConfig;
+import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.mapper.CmsConfigRepository;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,7 @@ public class CmsConfigService {
        return cmsConfigRepository.findById(id).orElse(null);
     }
 
-
-
+    public ResponseResult saveCmsConfig(CmsConfig cmsConfig) {
+        return cmsConfigRepository.save(cmsConfig)==null?ResponseResult.FAIL():ResponseResult.SUCCESS();
+    }
 }
