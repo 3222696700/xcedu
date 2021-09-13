@@ -1,13 +1,13 @@
 server:
-  port: 31001
+  port: 31000
 spring:
   application:
-    name: xc-service-manage-cms
+    name: xc-service-manage-cms-client
 
   #    MongoDB配置
   data:
     mongodb:
-      uri:  mongodb://localhost:27017/xc_cmsxc_cms
+      uri:  mongodb://localhost:27017/xc_cms
       database: xc_cms
 
   #      FreeMarker配置
@@ -23,14 +23,19 @@ spring:
     password: guest
     virtual-host: /
     port: 5672
-    template:
-      exchange: ex_routing_cms_postpage
-      routing-key: 5a751fab6abb5044e0d19ea1
-#      是否发布确认调用函数处理
-    publisher-confirms: true
-#       是否发布返回调用函数处理
-    publisher-returns: true
 
+    listener:
+      direct:
+        acknowledge-mode: manual
+        consumers-per-queue: 1
+        retry:
+          enabled: true
+
+
+#    默认队列设置
+page:
+  post:
+    queue: queue_cms_postpage
 
 #       Eureka Client Configuration
 #eureka:
@@ -42,10 +47,10 @@ spring:
 #  instance:
 #    instance-id: ${spring.application.name}:${server.port}
 #    prefer-ip-address: true
-
-
+#
+#
 #info:
-#  app.name: xc-service-manage-cms
-#  company.name: xuecheng education
-#  build.artifactId: com.xuecheng
-#  build.version: 1.0-SNAPSHOT
+#    app.name: xc-service-manage-cms-client
+#    company.name: xuecheng education
+#    build.artifactId: com.xuecheng
+#    build.version: 1.0-SNAPSHOT

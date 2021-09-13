@@ -12,6 +12,7 @@
         <module>../xc-service-manage-authorization</module>
         <module>../xc-service-manage-medium</module>
         <module>../xc-service-base-search</module>
+        <module>../xc-service-manage-cms-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

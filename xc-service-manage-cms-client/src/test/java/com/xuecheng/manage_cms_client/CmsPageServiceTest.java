@@ -1,4 +1,4 @@
-package com.xuecheng.manage_cms.service;
+package com.xuecheng.manage_cms_client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +10,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Auther:ghost
@@ -18,8 +17,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Description:com.xuecheng.manage_cms.freemarkertest
  * @version:1.0
  */
-@SpringBootTest
 @RunWith(SpringRunner.class)
+@SpringBootTest
 public class CmsPageServiceTest {
 
     @Autowired
@@ -41,10 +40,11 @@ public class CmsPageServiceTest {
 //        System.out.println(JSON.toJSON(cmsPagePostResult));
 //        System.out.println(rabbitTemplate);
 
-        Map map=new ConcurrentHashMap<>();
-        map.put("pageId", "60e3bb3d6479f42bd0934514");
 
-        rabbitTemplate.convertAndSend("ex_routing_cms_postpage", "5a751fab6abb5044e0d19ea1", map);
+
+        Map map=(Map)rabbitTemplate.receiveAndConvert("queue_cms_postpage_01");
     }
+
+
 
 }

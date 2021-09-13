@@ -1,9 +1,5 @@
 package com.xuecheng.manage_cms.service;
 
-import com.alibaba.fastjson.JSON;
-import com.mongodb.client.gridfs.GridFSBucket;
-import com.mongodb.client.gridfs.GridFSDownloadStream;
-import com.mongodb.client.gridfs.model.GridFSFile;
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.CmsSite;
 import com.xuecheng.framework.domain.cms.response.CmsCode;
@@ -17,16 +13,12 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.bson.types.ObjectId;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.gridfs.GridFsResource;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
@@ -50,18 +42,11 @@ public class PageViewService {
     @Resource
     CmsPageService cmsPageService;
 
-    @Resource
+   @Resource
     GridFsTemplate gridFsTemplate;
 
     @Resource
-    GridFSBucket gridFSBucket;
-
-    @Resource
     RabbitTemplate rabbitTemplate;
-
-    public static final String EX_ROUTING_CMS_PAGE_POST = "ex_routing_cms_postpage";
-
-    // todo:这里其实可以提供一个通用的获取页面预览URL、页面预览和页面发布接口，但是目前业务场景不允许，后续待实现。
 
     /**
      * @param id 预览页面的Id
@@ -101,8 +86,7 @@ public class PageViewService {
         if (gennerateAndSaveHtml(cmsPage)){
             Map map=new ConcurrentHashMap<>();
             map.put("pageId", pageId);
-            String message =JSON.toJSONString(map);
-            rabbitTemplate.convertAndSend("ex_routing_cms_postpage", cmsPage.getSiteId(), message.getBytes(StandardCharsets.UTF_8));
+            rabbitTemplate.convertAndSend(map);
             return CmsPagePostResult.postSuccess(url);
         }
         return CmsPagePostResult.postFail();
@@ -121,16 +105,13 @@ public class PageViewService {
 
         InputStream inputStream = IOUtils.toInputStream(htmlPage, StandardCharsets.UTF_8);
 
-        ObjectId objectId = gridFsTemplate.store(inputStream, cmsPage.getPageName());
+        ObjectId objectId= gridFsTemplate.store(inputStream,cmsPage.getPageName());
 
         cmsPage.setHtmlFileId(objectId.toHexString());
 
         CmsPageResult cmsPageResult = cmsPageService.savePage(cmsPage);
 
-        if (null==cmsPageResult||!(cmsPageResult.isSuccess()) || (null == cmsPageResult.getCmsPage())) {
-            return false;
-        }
-        return true;
+        return null != cmsPageResult && cmsPageResult.isSuccess() && (null != cmsPageResult.getCmsPage());
     }
 
     /**
@@ -165,74 +146,12 @@ public class PageViewService {
         return html;
     }
 
-    /**
-     * @paramc cmsPage 发布页面信息,通过MQ异步调用
-     * @Description: 根据提供的pageId将指定静态化后页面保存至页面配置指定路径下
-     * @Author: ghost
-     * @Date:2021/6/22
-     */
-    public boolean savePageToServerPath(String pageId) {
-        if (StringUtils.isEmpty(pageId)) {
-            return false;
-        }
-
-        CmsPage cmsPage = cmsPageService.findCmsPageById(pageId);
-        if (cmsPage == null) {
-            return false;
-        }
-        String pageServerPath = getPageServerPath(cmsPage);
-
-        if (StringUtils.isEmpty(pageServerPath)) {
-            return false;
-        }
-        String htmlFileId = cmsPage.getHtmlFileId();
-
-        GridFSFile gridFSFile = gridFsTemplate.findOne(Query.query(Criteria.where("_id").is(htmlFileId)));
-
-        assert gridFSFile != null;
-
-        GridFSDownloadStream gridFSDownloadStream = gridFSBucket.openDownloadStream(gridFSFile.getObjectId());
-
-        GridFsResource gridFsResource = new GridFsResource(gridFSFile, gridFSDownloadStream);
-
-        InputStream inputStream = null;
-        try {
-            gridFsResource.getInputStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return FreeMarkerUtil.uploadePageToServer(inputStream, pageServerPath);
-    }
-
-    /**
-     * @param cmsPage 发布页面
-     * @Description:根据CmsPage获取页面保存的节点物理路径
-     * @Author: ghost
-     * @Date:2021/6/22
-     */
-    public String getPageServerPath(CmsPage cmsPage) {
-        if (cmsPage == null
-                || StringUtils.isEmpty(cmsPage.getSiteId())
-                || StringUtils.isEmpty(cmsPage.getPagePhysicalPath())
-                || StringUtils.isEmpty(cmsPage.getPageName())) {
-            return null;
-        }
-        CmsSite cmsSite = cmsSiteService.findCmsSiteBySiteId(cmsPage.getSiteId());
-        if (cmsSite == null || StringUtils.isEmpty(cmsSite.getSitePhysicalPath())) {
-            return null;
-        }
-        String sitePhysicalPath = cmsSite.getSitePhysicalPath();
-        return sitePhysicalPath + cmsPage.getPagePhysicalPath() + cmsPage.getPageName();
-    }
-
     public String getPostPageUrl(CmsPage cmsPage) {
         if (cmsPage == null || StringUtils.isEmpty(cmsPage.getSiteId())) {
             return "";
         }
-
         CmsSite cmsSite = cmsSiteService.findCmsSiteBySiteId(cmsPage.getSiteId());
-
+        assert cmsSite!=null;
         return cmsSite.getSiteDomain() + cmsSite.getSiteWebPath() + cmsPage.getPageWebPath() + cmsPage.getPageName();
     }
 }

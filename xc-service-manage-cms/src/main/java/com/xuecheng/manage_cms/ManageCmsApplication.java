@@ -32,7 +32,4 @@ public class ManageCmsApplication {
     public RestTemplate restTemplate(){
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
     }
-
-//    @Bean
-//    public RabbitTemplate rabbitTemplate(){return new RabbitTemplate();}
 }

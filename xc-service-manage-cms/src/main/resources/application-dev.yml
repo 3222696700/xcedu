@@ -7,7 +7,7 @@ spring:
   #    MongoDB配置
   data:
     mongodb:
-      uri:  mongodb://localhost:27017/xc_cms
+      uri:  mongodb://localhost:27017/xc_cmsxc_cms
       database: xc_cms
 
   #      FreeMarker配置
@@ -19,28 +19,33 @@ spring:
   #        RibbitMQ配置
   rabbitmq:
     host: 127.0.0.1
-    username: admin
-    password: admin
+    username: guest
+    password: guest
     virtual-host: /
     port: 5672
+    template:
+      exchange: ex_routing_cms_postpage
+      routing-key: 5a751fab6abb5044e0d19ea1
+#      是否发布确认调用函数处理
+    publisher-confirms: true
+#       是否发布返回调用函数处理
+    publisher-returns: true
 
 
 #       Eureka Client Configuration
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: ${EUREKA_SERVER:http://eureka-dev-1:50101/eureka,http://eureka-dev-2:50102/eureka}
-  instance:
-    instance-id: ${spring.application.name}:${server.port}
-    prefer-ip-address: true
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: ${EUREKA_SERVER:http://eureka-dev-1:50101/eureka,http://eureka-dev-2:50102/eureka}
+#  instance:
+#    instance-id: ${spring.application.name}:${server.port}
+#    prefer-ip-address: true
 
 
-info:
-    app.name: xc-service-manage-cms
-    company.name: xuecheng education
-    build.artifactId: com.xuecheng
-    build.version: 1.0-SNAPSHOT
-
-
+#info:
+#  app.name: xc-service-manage-cms
+#  company.name: xuecheng education
+#  build.artifactId: com.xuecheng
+#  build.version: 1.0-SNAPSHOT
